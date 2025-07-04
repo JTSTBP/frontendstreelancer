@@ -3,13 +3,14 @@ import React, { useState } from "react";
 import { FaGoogle, FaFacebook, FaLinkedin } from "react-icons/fa";
 import "./auth.css";
 import { useNavigate } from "react-router-dom";
+import Backendurl from "../../config"; 
 
 const Login = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [message, setMessage] = useState("");
   const [messageType, setMessageType] = useState(""); // 'success' | 'error'
-  const Backendurl=process.env.REACT_APP_BACKEND_URL
+
 
   // Handle input changes
   const handleChange = (e) => {

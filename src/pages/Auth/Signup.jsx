@@ -7,6 +7,7 @@ import slide1 from "../../images/signup1.png";
 import slide2 from "../../images/signup2.png";
 import slide3 from "../../images/signup3.png";
 import "./auth.css";
+import Backendurl from "../../config"; 
 
 const images = [slide1, slide2, slide3];
 
@@ -22,7 +23,7 @@ const Signup = () => {
   const [message, setMessage] = useState("");
   const [messageType, setMessageType] = useState("");
   const navigate = useNavigate();
-    const Backendurl=process.env.REACT_APP_BACKEND_URL
+
 console.log(Backendurl,"Backendurl")
   // Carousel effect
   useEffect(() => {

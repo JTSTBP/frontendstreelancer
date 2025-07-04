@@ -66,7 +66,7 @@ const handleChange = (e) => {
             name="firstName"
             placeholder="First name"
             value={formData.personal.firstName || ""}
-            onChange={handleChange} />
+            onChange={handleChange} required/>
           <input  type="text"
             name="lastName"
             placeholder="Last name"
@@ -79,12 +79,12 @@ const handleChange = (e) => {
             name="email"
             placeholder="Email Address"
             value={formData.personal.email || ""}
-            onChange={handleChange} />
+            onChange={handleChange} required/>
           <input type="tel"
             name="phone"
             placeholder="Phone Number"
             value={formData.personal.phone || ""}
-            onChange={handleChange} />
+            onChange={handleChange} required />
         </div>
 
         <div className="form-row">

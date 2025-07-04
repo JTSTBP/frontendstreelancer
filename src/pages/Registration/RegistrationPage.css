@@ -1,3 +1,14 @@
+
+.validation-error {
+  color: red;
+  background-color: #ffecec;
+
+  padding: 10px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
 .register-bg-container{ /* fallback or overlay color */
   background-image: url('../../images/bg.png');
   background-size: cover;

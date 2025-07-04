@@ -1,3 +1,13 @@
+.back-arrow {
+ 
+  cursor: pointer;
+ 
+  transition: all 0.3s ease;
+}
+
+.back-arrow:hover {
+  color: #007bff;
+}
 
 .top-wave {
   width: 100%;
@@ -29,7 +39,10 @@
 
 
 @media screen and (max-width:760px) {
-  .text-overlay {top:5%;}
+  .text-overlay {top:2%;}
+  .back-arrow .backarrow{
+  width: 10px;
+}
   
 }
 
@@ -392,6 +405,7 @@ align-items: center;
 
 .global-form input[type="text"],
 .global-form input[type="email"],
+.global-form input[type="tel"],
 .global-form select,
 .global-form textarea {
   width:95%;

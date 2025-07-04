@@ -19,7 +19,19 @@ function HeroServices() {
 
       <div className="services-grid">
        
-
+ <ServiceCard
+          title="DEI Talent"
+          className="orgcard"
+          subtitle="Network"
+          points={[
+            "Personalized journey based on your career goals and experience.",
+            "AI-powered skill assessment, custom recommendations, and career path mapping."
+          ]}
+          
+           mainImage={img3}
+       navigateTo="/DEITalent"
+          altText="Marketplace"
+        />
 
         <ServiceCard
           title="Global"
@@ -34,19 +46,7 @@ function HeroServices() {
       navigateTo="/GlobalFlex"
           altText="Marketplace"
         />
-        <ServiceCard
-          title="DEI Talent"
-          className="orgcard"
-          subtitle="Network"
-          points={[
-            "Personalized journey based on your career goals and experience.",
-            "AI-powered skill assessment, custom recommendations, and career path mapping."
-          ]}
-          
-           mainImage={img3}
-       navigateTo="/DEITalent"
-          altText="Marketplace"
-        />
+       
                 <ServiceCard
           title="Academy"
           className="bluecard"
