@@ -4,11 +4,13 @@
 padding: 10px;
   gap: 40px;
   flex-wrap: wrap;
+  position: relative;
+  margin: 84px auto;
 }
 
 .why-left {
   flex: 1;
-  max-width: 650px;
+  max-width: 550px;
 }
 
 .why-left h2 {
@@ -28,8 +30,8 @@ padding: 10px;
 
     gap: 20px;
 
-    position: absolute;
-
+    position: relative;
+left: -100px;
     height: 68%;
    
     z-index: 2;
@@ -89,55 +91,51 @@ padding: 10px;
   background: #f6c5e6;
   border-radius: 50%;
 }
-
-
-
-.shape-box {
- width: 499px;
-    height: 629px;
-    background-color: orange;
-    border-radius: 24px;
-    position: relative;
-    z-index: 0;
+.union{
+  position: relative;
 }
 
-.shape-box .m {
-  position: absolute;
-  height: 80%;
-  background-color: var(--bgcolor, #f7c3e9);
-  width: 50%;
-  bottom: 0;
-  left: 0;
-  border-top-right-radius: 24px;
+.union .text{
+      position: absolute;
+    top: 30%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    z-index: 2;
+    display: flex
+;
+    gap: 30px;
+}
+.union .text h1{
+  letter-spacing: 5px;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+.union .text ul{
+  list-style-type: none;
+  li{
+    margin-top: 4px;
+  }
+  
 }
 
-.shape-box .m:before,
-.shape-box .m:after {
-  position: absolute;
-  content: "";
-  width: 24px;
-  aspect-ratio: 1;
-  background: radial-gradient(circle 24px at top right, #0000 98%, var(--bgcolor, #f7c3e9)) top right;
-}
-
-.shape-box .m:before {
-  top: -24px;
-}
-
-.shape-box .m:after {
-  bottom: 0;
-  right: -24px;
-}
 @media screen and (max-width:1254px) {
   .why-cards{
      grid-template-columns: repeat(2, 1fr);
   }
+  .why-cards {left:158px;}
+  .union .text{
+    top: 20%;
+  }
 }
 
 @media screen and (max-width:990px) {
-  .shape-box{
+  .union{
     display: none;
   }
+  .why-cards {left:0px;}
   
 }
 @media screen and (max-width:717px) {
@@ -149,3 +147,372 @@ justify-self: center;
  
 }
 
+
+
+/* card4 */
+
+
+.industries-section {
+  padding: 40px 20px;
+
+  text-align: center;
+
+}
+
+.industries-title {
+  font-size: var(--mainheadfont);
+  color: var(--lightpurcolor);
+  margin-bottom: 8px;
+}
+
+.industries-subtitle {
+  font-size: var(--parafont);
+  color: var(--lightpurcolor);
+  margin-bottom: 40px;
+}
+
+.industries-content {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.industries-image img {
+  max-width: 320px;
+  height: auto;
+}
+
+.industries-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  max-width: 600px;
+}
+
+.industry-card {
+  background-color: #e9d8fd;
+  border-radius: 12px;
+
+  text-align: left;
+  position: relative;
+  min-height: 120px;
+}
+.industry-card div{
+  display: flex;
+}
+.industry-card img{
+  width: 80px;
+}
+.card-title {
+  color: var(--lightpurcolor);
+  font-weight: 600;
+  margin: 0 0 6px;
+  margin-top: 10px;
+  font-size: var(--parafont);
+}
+
+.card-description {
+  color: var(--primarycolor);
+  font-size: var(--smallparafont);
+  margin: 0;
+  margin-left:10px;
+}
+@media screen and (max-width:650px) {
+  .industries-cards {
+ 
+  grid-template-columns: repeat(1,1fr);
+
+}
+}
+
+
+/* card5 */
+
+.how-it-works {
+  text-align: center;
+  
+  padding: 60px 20px;
+  color: #45006d;
+}
+
+.how-it-works-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.how-it-works-subtitle {
+  font-size: 16px;
+  margin-bottom: 50px;
+  color: #7b529d;
+}
+
+.graph-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: relative;
+  height: 70vh;
+}
+
+.graph-step {
+  width: 220px;
+  margin: 20px;
+  position: relative;
+      display: flex
+;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.graph{
+  width: 127px;
+    height: 127px;
+    border: 2px dotted blue;
+    border-radius: 50%;
+}
+/* Different vertical alignment for 1st and 3rd steps */
+.graph-step:nth-child(1),
+.graph-step:nth-child(3) {
+ align-self: flex-end;
+}
+
+.graph-step:nth-child(2),
+.graph-step:nth-child(4) {
+align-self: flex-start;
+}
+
+
+.graph-circle {
+  width: 100px;
+  height: 100px;
+  border: 2px dashed #bb80ff;
+  border-radius: 50%;
+  margin: 10px auto;
+  position: relative;
+  background-color: #45006d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.graph-circle img {
+  width: 60%;
+}
+
+.graph-step-number {
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #e2c9ff;
+  color: #45006d;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.graph-step-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.graph-step-desc {
+  font-size: 14px;
+  color: #555;
+}
+
+
+.connector-line {
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background-color: #bb80ff;
+  z-index: 1;
+}
+
+.connector-0 {
+      top: 108px;
+    left: 214px;
+    width: 284px;
+    transform: rotate(-25deg);
+}
+
+.connector-1 {
+  top: 109px;
+    left: 588px;
+    width: 288px;
+    transform: rotate(25deg);
+}
+
+.connector-2 {
+     top: 161px;
+    right: 248px;
+    transform: rotate(351deg);
+    width: 249px;
+
+}
+@media screen and (max-width:1210px) {
+  .graph-container {height: auto;}
+}
+@media screen and (max-width:1490px) {
+  .connector-line {display: none;}
+}
+
+
+
+/* card6 */
+.main-hiringcard{
+  text-align: center;
+  color: var(--primarycolor);
+}
+.main-hiringcard h1 {
+  font-size: var(--mainheadfont);
+    color: var(--lightpurcolor);
+}
+.main-hiringcard p{
+  font-size: var(--parafont);
+  color: var(--lightpurcolor);
+}
+.hiring-items{
+ margin: 50px auto;
+    width: 80%;
+    display: flex
+;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+/* remotecarditem1 */
+
+.remote-card {
+ 
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 250px;
+  text-align: left;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-family: Arial, sans-serif;
+  background-color: #E4D9F5;
+}
+
+.remote-icon-circle {
+  background-color: var(--lightpurcolor);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -50px auto 10px auto;
+  z-index: 1;
+  position: relative;
+}
+
+.remote-icon-circle img {
+  width: 40px;
+  height: 40px;
+}
+
+.remote-title {
+  color: var(--lightpurcolor);
+  font-size: var(--btnfont);
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.remote-features {
+  margin-top: 10px;
+  font-size: var(--smallparafont);
+  color: var(--primarycolor);
+  padding-left: 20px;
+}
+
+.remote-features li {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+
+/* card7 */
+
+.consultation-section {
+  padding: 40px 20px;
+  background-color: #fbeef4;
+  font-family: sans-serif;
+}
+
+.consultation-container {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.consultation-form-container,
+.consultation-info-container {
+  flex: 1 1 400px;
+}
+
+.consultation-info-container h3 {
+  font-size: 20px;
+  color: #4b007d;
+  margin-bottom: 20px;
+}
+
+.consultation-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.consultation-form-container form input,
+.consultation-form-container form textarea {
+  padding: 10px;
+  border: 1px solid #7a2b87;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+.consultation-form-container form button {
+  background-color: #4b007d;
+  color: white;
+  padding: 10px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: start;
+}
+
+.consultation-info-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: #4b007d;
+}
+
+.consultation-info-box .consultation-info-title {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.consultation-info-box p {
+  margin: 0;
+  color: #333;
+}

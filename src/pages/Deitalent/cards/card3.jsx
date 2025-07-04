@@ -76,10 +76,19 @@ const WhyChooseUs = () => {
           </div>
         </div>
       </div> */}
-
-      <div className='shape-box'>
-        <div className='m'></div>
+      <div className='union'>
+        <img src={require("../../../images/Union.png")}/>
+          <div className='text'>
+           <h1>WHY</h1>
+          <ul><li>C</li><li>H</li><li>O</li><li>O</li><li>S</li><li>E</li><li>U</li><li>S</li><li>?</li></ul>
+        </div>
       </div>
+
+      {/* <div className='shape-box'>
+      
+       
+        <div className='m'></div>
+      </div> */}
     </div>
   );
 };

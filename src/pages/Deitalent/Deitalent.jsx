@@ -6,6 +6,10 @@ import { useLocation } from "react-router-dom";
 import Deitalentbanner from "./cards/card1";
 import Deifeatures from "./cards/card2";
 import WhyChooseUs from "./cards/card3";
+import HowItWorks from "./cards/card5";
+import HiringCard from "./cards/card6";
+import IndustriesSection from "./cards/card4";
+import ContactForm from "./cards/card7";
 
 
 const Deitalent = () => {
@@ -21,7 +25,11 @@ const Deitalent = () => {
      <Deitalentbanner/>
      <Deifeatures/>
      <WhyChooseUs/>
-     
+      <IndustriesSection/>
+     <HowItWorks/>
+     <HiringCard/>
+     <ContactForm/>
+    
     </div>
   );
 };
