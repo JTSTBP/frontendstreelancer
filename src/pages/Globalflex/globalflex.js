@@ -7,6 +7,8 @@ import IndustrySolutions from "./cards/industrysolutions";
 import HowItWorks from "./cards/howitworks";
 import ContactForm from "./cards/contactus";
 import { useLocation } from "react-router-dom";
+import Navbar from "../Home/navbar";
+import SampleNavbar from "../Home/OtherpagesNavbar";
 
 
 
@@ -18,6 +20,7 @@ const GlobalFlex = () => {
   
   return (
     <div>
+      <SampleNavbar/>
    <GlobalFlexNetwork/>
    <GlobalFlexFeatures/>
    <IndustrySolutions/>

@@ -8,42 +8,73 @@ import creative from '../../../images/ind6.png';
 
 const solutions = [
   {
-    title: 'Technology & Innovation',
+    title: 'Startups & SaaS',
     image: tech,
     color: 'ind1',
-    list: ['Software Engineers', 'Data Scientists', 'DevOps & Cloud Experts', 'Product Managers & Designers'],
+    list: [
+      'SDRs & Business Development',
+      'Client Success Management',
+      'Lead Generation & Qualification',
+      'Technical Support & Onboarding',
+    ],
   },
   {
-    title: 'Business Services',
+    title: 'EdTech & Training',
     image: business,
     color: 'ind2',
-    list: ['Executive Assistants', 'Finance & Accounting Experts', 'HR & Recruitment Specialists', 'Operations & Project Managers'],
+    list: [
+      'Academic Sales Representatives',
+      'LMS Administration & Support',
+      'Social Media Management',
+      'Student Onboarding & Engagement',
+    ],
   },
   {
-    title: 'Sales & Marketing',
+    title: 'Real Estate & Property',
     image: sales,
     color: 'ind3',
-    list: ['Digital Marketers', 'Sales Representatives', 'SEO/SEM Specialists', 'Social Media Managers'],
+    list: [
+      'CRM Administration & Management',
+      'Inside Sales & Lead Qualification',
+      'Customer Support & Inquiries',
+      'Documentation & Transaction Support',
+    ],
   },
   {
-    title: 'Operations & Support',
+    title: 'FMCG & Consumer Goods',
     image: support,
     color: 'ind4',
-    list: ['Customer Success Managers', 'Technical Support Specialists', 'Client Relationship Managers', 'Multilingual Support Teams'],
+    list: [
+      'Sales & Distribution Support',
+      'MIS Analysis & Reporting',
+      'Supply Chain Back Office Operations',
+      'Social Media & Digital Marketing',
+    ],
   },
   {
-    title: 'Global Expansion',
+    title: 'Life Sciences & Healthcare',
     image: global,
     color: 'ind5',
-    list: ['International Business Consultants', 'Localization Specialists', 'Global Compliance Experts', 'Cross-cultural Trainers'],
+    list: [
+      'Claims Processing & Management',
+      'Medical Documentation (Non-Clinical)',
+      'Telehealth Support & Coordination',
+      'Patient Engagement & Follow-up',
+    ],
   },
   {
-    title: 'Creative & Design',
+    title: 'Manufacturing & Industrial',
     image: creative,
     color: 'ind6',
-    list: ['UX/UI Designers', 'Graphic Designers & Illustrators', 'Copywriters & Content Creators', 'Video Editors & Animators'],
+    list: [
+      'Sales Support & Order Processing',
+      'Quality Assurance Documentation',
+      'Marketing Campaign Assistance',
+      'Operations & Logistics Support',
+    ],
   },
 ];
+
 
 const IndustrySolutions = () => {
   return (

@@ -75,7 +75,7 @@ const validateStep = () => {
 };
 
 
-console.log(formData,"formData")
+
 
  const handleNext = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -110,7 +110,7 @@ const handleSubmit = async () => {
     });
     const data = await response.json();
 
-console.log(data,"response");
+
 
     if (response.ok) {
       setShowPopup(true);

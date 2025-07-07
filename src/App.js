@@ -31,7 +31,7 @@ export default function App() {
           <Route path="/Registration" element={<RegistrationPage/>} />
           <Route path="/GlobalFlex" element={<GlobalFlex/>} />
            <Route path="/DEITalent" element={<Deimain/>} />
-             <Route path="/DEITalent2" element={<Deitalent/>} />
+             <Route path="/DEITalenthire" element={<Deitalent/>} />
       </Routes>
     </Router>
        <ToastContainer position="top-right" autoClose={3000} /></>

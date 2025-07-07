@@ -6,36 +6,30 @@ import step3 from "../../../images/step3.png"
 import step4 from "../../../images/step4.png"
 
 const HowItWorks = () => {
-  const steps = [
-    {
-      title: 'Talent Assessment',
-      description:
-        'Rigorous vetting of skills, language, adaptability, and remote readiness.',
-       color:"#eceaea73",
-       img:step1
-    },
-    {
-      title: 'Skills Matching',
-      description:
-        'AI-driven matching ensures the right technical and cultural fit.',
-        color:"#F1D3D0",
-          img:step2
-    },
-    {
-      title: 'Cultural Alignment',
-      description:
-        'We assess for value alignment and cross-cultural communication skills.',
-         color:"#eceaea73"
-         ,  img:step3
-    },
-    {
-      title: 'Onboarding Support',
-      description:
-        'Smooth integration with training, tools, and timezone support.',
-         color:"#FFEFEE",
-           img:step4
-    },
-  ];
+ const steps = [
+  {
+    title: 'Share Role Requirements',
+    description:
+      "Tell us about your business needs and the specific roles you're looking to fill.",
+    color: '#f8d7e0',
+    img: step1, // Assuming you're using the same step image variable names
+  },
+  {
+    title: 'Get Vetted Profiles',
+    description:
+      "We’ll match you with pre-screened professionals who have the skills and experience you need.",
+    color: '#e5d8f6',
+    img: step2,
+  },
+  {
+    title: 'Onboard in 72 Hours',
+    description:
+      'We manage performance and daily operations, so you can focus on outcomes and business growth.',
+    color: '#f8d7e0',
+    img: step3,
+  },
+];
+
 
   return (
     <div className="howitworks-container">

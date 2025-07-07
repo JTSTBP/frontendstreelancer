@@ -49,11 +49,11 @@ const steps = [
     component: <DEIReviewConsent data={infoData} setData={setInfodata}  />
   }
 ];
-  console.log("Collected Form Data:", infoData);
+ 
 
 // const handleSubmit = () => {
 
-//   console.log("Submitting DEI survey...");
+//   ("Submitting DEI survey...");
   
 
 //   alert("Your DEI survey has been submitted successfully!");

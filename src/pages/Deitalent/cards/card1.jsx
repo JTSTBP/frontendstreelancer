@@ -16,10 +16,7 @@ const Deitalentbanner = () => {
         <img src={topWave} alt="Top Wave" className="top-wave" />
         
         <div className="text-overlay">
-          <div className="back-arrow" onClick={() => navigate("/")}>
-        <ArrowLeft size={24} className="backarrow" />
-       
-      </div>
+          
           <h1>Streelancer for Indian Enterprises</h1>
           <p>
           Flexible. Purpose-Driven. DEI-Compliant.

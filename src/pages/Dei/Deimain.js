@@ -13,6 +13,7 @@ import DEICertification from "./cards/deicerti";
 import DEIBadges from "./cards/deibadge";
 import StartDEIJourney from "./cards/deiend";
 import Mainpopup from "./popup/mainpopup";
+import SampleNavbar from "../Home/OtherpagesNavbar";
 
 
 
@@ -26,6 +27,7 @@ const Deimain = () => {
 
   return (
     <div>
+         <SampleNavbar/>
       <Deibanner />
       <Deifeatures onTakeSurveyClick={() => setShowSurvey(true)} />
       <Deisurvey />

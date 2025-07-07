@@ -10,6 +10,7 @@ import HowItWorks from "./cards/card5";
 import HiringCard from "./cards/card6";
 import IndustriesSection from "./cards/card4";
 import ContactForm from "./cards/card7";
+import SampleNavbar from "../Home/OtherpagesNavbar";
 
 
 const Deitalent = () => {
@@ -22,6 +23,7 @@ const Deitalent = () => {
 
   return (
     <div>
+         <SampleNavbar/>
      <Deitalentbanner/>
      <Deifeatures/>
      <WhyChooseUs/>

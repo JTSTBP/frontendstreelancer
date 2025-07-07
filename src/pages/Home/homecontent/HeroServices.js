@@ -34,9 +34,9 @@ function HeroServices() {
         />
 
         <ServiceCard
-          title="Global"
+          title="Remote"
           className="orgcard"
-          subtitle="Flexwork Network"
+          subtitle="Talent Network"
           points={[
             "Match with freelance gigs or part-time roles based on your skills and goals.",
             "Writer, Designer, Virtual Assistant (VA), SDR & more."

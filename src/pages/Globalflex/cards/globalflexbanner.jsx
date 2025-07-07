@@ -17,15 +17,11 @@ const GlobalFlexNetwork = () => {
         <img src={topWave} alt="Top Wave" className="top-wave" />
         
         <div className="text-overlay">
-          <div className="back-arrow" onClick={() => navigate("/")}>
-        <ArrowLeft size={24} />
-       
-      </div>
-          <h1>Global Flex Network<br />Borderless Talent Solutions</h1>
+         
+          <h1>Hire Smarter. Scale Faster. Work Remote.</h1>
           <p>
-            Access a diverse global network of flexible talent across time zones, cultures, and
-            specializations. Build your borderless team with our vetted professionals ready for remote
-            collaboration.
+           Build your business with pre-trained, reliable remote professionals — fully managed by Streelancer. Trusted by startups and SMEs to scale ops 30–40% cheaper, with no quality compromise.
+
           </p>
         </div>
       </div>
