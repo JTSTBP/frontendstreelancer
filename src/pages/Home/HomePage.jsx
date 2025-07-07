@@ -6,12 +6,13 @@ import HeroServices from "./homecontent/HeroServices";
 import CommunityBanner from "./homecontent/CommunityBanner";
 import ExperienceBoxes from "./homecontent/ExperienceBoxes";
 import StreelancerSteps from "./homecontent/stepscontent";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Navbar from "./navbar";
 import FindGreatWork from "./homecontent/findgreatwork";
  // Adjust the path as needed
 
 const HomePage = () => {
+   const navigate = useNavigate();
   const { pathname } = useLocation();
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("token"));
 
@@ -33,7 +34,7 @@ const HomePage = () => {
               building.
             </p>
             <div className="hero-buttons">
-              <button className="btn-primary">Hire Now</button>
+              <button className="btn-primary" onClick={()=>{ navigate("/DEITalenthire")}}>Hire Now</button>
               <button className="btn-primary btn-outline">Join Academy</button>
             </div>
             <ul className="features">

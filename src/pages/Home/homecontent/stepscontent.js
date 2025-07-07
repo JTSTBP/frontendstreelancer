@@ -12,6 +12,7 @@ import num1 from "../../../images/num1.png"
 import num2 from "../../../images/num2.png"
 import num3 from "../../../images/num3.png"
 import num4 from "../../../images/num4.png"
+import { useNavigate } from 'react-router-dom';
 
 
 const stepIcons = [ic1,ic2,ic3,ic4
@@ -23,6 +24,7 @@ const numsicon = [num1,num2,num3,num4
 ];
 
 const StreelancerSteps = () => {
+     const navigate = useNavigate();
   return (
     <div className="main-container">
       <h2 className="title">Find Your Fit, Your Way</h2>
@@ -97,7 +99,7 @@ const StreelancerSteps = () => {
 </li>
           
           </ul>
-          <button className="hire-btn">Hire Now</button>
+          <button className="hire-btn" onClick={()=>{ navigate("/DEITalenthire")}}>Hire Now</button>
 
           <img
     src={require("../../../images/people.png")}
