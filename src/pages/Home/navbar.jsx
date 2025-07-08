@@ -72,7 +72,7 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
 
         
         <li onClick={() => setMenuOpen(false)}>Academy</li>
-        <li onClick={() => setMenuOpen(false)}>Community</li>
+        <li onClick={() => { navigate("/Community");setMenuOpen(false)}}>Community</li>
 
         <li>
           {isLoggedIn && (
