@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "@fontsource/roboto"; // Defaults to weight 400
+import "@fontsource/inter";
 
 import HomePage from "./pages/Home/HomePage";
 

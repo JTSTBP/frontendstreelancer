@@ -13,8 +13,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     /* gap: 20px; */
-    padding: 1rem 4rem;
-    
+   
     /* margin: 10px;*/
 }
 
@@ -81,13 +80,12 @@ border-top-left-radius: 30px; ul{
   margin-top: 20px;
   background-color: #FFF0E8;
   color: #1e1e2f;
- padding: 5px;
+
   border: none;
   border-radius: 4px;
   font-weight: bold;
   cursor: pointer;
-  width:134px;
-  height:28px;
+
   position: relative;
    z-index: 10;
 }
@@ -99,7 +97,11 @@ border-top-left-radius: 30px; ul{
      z-index: 1;
   pointer-events: none;
 }
-
+@media screen and (min-width:1305px) {
+  .gap-ordcard .learn-button{
+    bottom:-23px;
+  }
+}
 
 @media screen and (max-width:1432px) {
 
@@ -121,7 +123,7 @@ border-top-left-radius: 30px; ul{
    
 }
 .service-card ul {margin-bottom: 120px;}
-.learn-button {width:124px;}
+
 
 
 }
@@ -133,7 +135,7 @@ border-top-left-radius: 30px; ul{
    
 }
 .service-card ul {margin-bottom: 145px;}
-.learn-button {width:82px;
+.learn-button {
 position: absolute;
 bottom:4px;
         margin-bottom: 13px;
@@ -150,7 +152,7 @@ bottom:4px;
 .community-section {
   background-color: #FFCCB1;
   padding: 40px 20px 0;
-  font-family: 'Segoe UI', sans-serif;
+ 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -418,7 +420,7 @@ font-size: 14px;
   background-color: #fff3ec;
   padding: 40px 20px;
  text-align: center;
-  font-family: 'Segoe UI', sans-serif;
+ 
 }
 
 .section-title {
@@ -604,7 +606,7 @@ width:24em;}
 
 
 .main-container {
-  font-family: 'Segoe UI', sans-serif;
+
   background-color: #fff3ec;
   padding: 40px 20px;
   text-align: center;
@@ -915,6 +917,8 @@ background-color: #d07c5d;
 
 .findgreat-icon img {
 width: 120px;
+    
+    height: 121px;
 }
 
 .findgreat-hire-now {
@@ -996,6 +1000,11 @@ width: 120px;
   .findgreat-image-container {
   justify-self: center;
 }
+  .findgreat-icon img {
+width: 110px;
+    
+    height: 100px;
+}
   
 }
 @media screen and (max-width:875px) {
@@ -1006,4 +1015,6 @@ width: 120px;
     width: clamp(220px, 80%, 900px);;
 
   }
+
+
 }

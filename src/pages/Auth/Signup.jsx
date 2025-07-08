@@ -8,6 +8,9 @@ import slide2 from "../../images/signup2.png";
 import slide3 from "../../images/signup3.png";
 import "./auth.css";
 import Backendurl from "../../config"; 
+import { signupSchema } from "../../validations/validationSchema";
+
+
 
 const images = [slide1, slide2, slide3];
 
@@ -56,11 +59,15 @@ console.log(Backendurl,"Backendurl")
     e.preventDefault();
 setMessage("");           // Clear previous message
 setMessageType("");
-    if (!isValid()) {
-      setMessage("Please fill in all fields.");
-      setMessageType("Warning")
-      return;
-    }
+
+
+  const { error } = signupSchema.validate(formData);
+
+  if (error) {
+    setMessage(error.details[0].message);
+    setMessageType("Warning");
+    return;
+  }
 
     try {
       const response = await fetch(`${Backendurl}/api/signup`, {

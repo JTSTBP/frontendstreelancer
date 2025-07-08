@@ -12,6 +12,7 @@ import PortfolioWorkSamples from "./formcards/portfolio";
 import AlmostDone from "./formcards/Almost";
 import { useNavigate } from "react-router-dom";
 import Backendurl from "../../config"; 
+import { personalSchema } from "../../validations/validationSchema";
 
 const steps = [
   "Personal",
@@ -36,43 +37,25 @@ function RegistrationPage() {
 });
 
 const validateStep = () => {
-  const personal = formData.personal;
+  if (currentStep === 0) {
+    const { error } = personalSchema.validate(formData.personal, { abortEarly: false });
 
-  switch (currentStep) {
-    case 0:
-      if (!personal.firstName?.trim()) {
-        setValidationError("First name is required.");
-        return false;
-      }
-      if (!personal.email?.trim()) {
-        setValidationError("Email is required.");
-        return false;
-      }
-      if (!/^\S+@\S+\.\S+$/.test(personal.email)) {
-        setValidationError("Invalid email format.");
-        return false;
-      }
-      if (!personal.phone?.trim()) {
-        setValidationError("Phone number is required.");
-        return false;
-      }
-      if (!/^[0-9]{10}$/.test(personal.phone)) {
-        setValidationError("Phone number should be 10 digits.");
-        return false;
-      }
-        if (!personal.gender?.trim()) {
-        setValidationError("Gender is required.");
-        return false;
-      }
+    if (error) {
+const allErrors = error.details[0].message;
+      setValidationError(allErrors);
 
-      // If all checks pass
-      setValidationError(""); // Clear error
-      return true;
-
-    default:
-      return true;
+      // Optional: show with toast
+      // error.details.forEach(err => toast.error(err.message));
+      return false;
+    }
   }
+
+  // Future: Add professionalSchema, etc., for other steps
+
+  setValidationError("");
+  return true;
 };
+
 
 
 
@@ -132,6 +115,10 @@ navigate("/")
   return (
     <div className="register-bg-container">
       <div className="register-container">
+        <button className="close-registration-btn" onClick={() => navigate("/")}>
+  ✕
+</button>
+
         <h1 className="register-title">Join Streelancer</h1>
         <p className="register-subtitle">
           Complete this 6-step registration to find your perfect work opportunity

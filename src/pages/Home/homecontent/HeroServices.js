@@ -20,9 +20,9 @@ function HeroServices() {
       <div className="services-grid">
        
  <ServiceCard
-          title="DEI Talent"
+          title="DEI Impact"
           className="orgcard"
-          subtitle="Network"
+          subtitle="Score Card"
           points={[
             "Personalized journey based on your career goals and experience.",
             "AI-powered skill assessment, custom recommendations, and career path mapping."
@@ -35,7 +35,7 @@ function HeroServices() {
 
         <ServiceCard
           title="Remote"
-          className="orgcard"
+          className="orgcard gap-ordcard"
           subtitle="Talent Network"
           points={[
             "Match with freelance gigs or part-time roles based on your skills and goals.",

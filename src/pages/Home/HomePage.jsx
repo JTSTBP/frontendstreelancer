@@ -30,12 +30,12 @@ const HomePage = () => {
           <div>
             <h1>Hire. Train. Empower.</h1>
             <p>
-              India's largest women-first platform for inclusive career
+              India's largest Women-first platform for inclusive career
               building.
             </p>
             <div className="hero-buttons">
-              <button className="btn-primary" onClick={()=>{ navigate("/DEITalenthire")}}>Hire Now</button>
-              <button className="btn-primary btn-outline">Join Academy</button>
+              <button className="btn-primary standard-btn" onClick={()=>{ navigate("/DEITalenthire")}}>Hire Now</button>
+              <button className="btn-primary btn-outline standard-btn">Register Now</button>
             </div>
             <ul className="features">
               <li>

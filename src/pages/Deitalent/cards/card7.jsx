@@ -1,21 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 import { toast } from "react-toastify";
 import { Mail, Phone, MapPin } from "lucide-react";
 import Backendurl from "../../../config"; 
+import { consultSchema } from "../../../validations/validationSchema";
 
 const ContactForm = () => {
+const [errorMessages, setErrorMessages] = useState("");
+const errorRef = useRef(null);
 
 
 
   const [formData, setFormData] = useState({
     company: '',
     name: '',
-     phone: '',
+    phone: '',
     email: '',
-    regions: [],
-    workModel: 'Full time remote',
-    country: 'Your country',
-    teamSize: 15,
     requirements: '',
   });
 
@@ -38,6 +37,24 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+     const { error } = consultSchema.validate(formData);
+    if (error) {
+  
+    const allErrors = error.details[0].message;
+    setErrorMessages(allErrors);
+    setTimeout(() => {
+      if (errorRef.current) {
+        errorRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }, 100); // slight delay ensures DOM update
+
+    return;
+  }
+
+
+
+  setErrorMessages(""); 
+
     try {
       const response = await fetch(`${Backendurl}/api/contact`, {
         method: 'POST',
@@ -51,13 +68,10 @@ const ContactForm = () => {
         // Optionally reset form
         setFormData({
           company: '',
-          name: '',
-          email: '',
-          regions: [],
-          workModel: 'Full time remote',
-          country: 'Your country',
-          teamSize: 15,
-          requirements: '',
+    name: '',
+    phone: '',
+    email: '',
+    requirements: '',
         });
       } else {
        
@@ -85,14 +99,50 @@ const ContactForm = () => {
       <div className="consultation-container">
         <div className="consultation-form-container">
           <h3>Book a Free Consultation</h3>
-          <form>
-            <input type="text" placeholder="Full Name" />
-            <input type="text" placeholder="Company Name" />
-            <input type="email" placeholder="Email Address" />
-            <input type="tel" placeholder="Phone Number" />
-            <textarea placeholder="Hiring Requirement" rows="4"></textarea>
-            <button type="submit">Schedule Consultation</button>
-          </form>
+           {errorMessages  && <p className='error-message' ref={errorRef} >{errorMessages}</p>}
+          <form onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  id="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Full Name"
+                  
+                />
+                <input
+                  type="text"
+                  id="company"
+                  value={formData.company}
+                  onChange={handleChange}
+                  placeholder="Company Name"
+                  
+                />
+                <input
+                  type="email"
+                  id="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Email Address"
+                 
+                />
+                <input
+                  type="tel"
+                  id="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="Phone Number"
+                  
+                />
+                <textarea
+                  id="requirements"
+                  value={formData.requirements}
+                  onChange={handleChange}
+                  placeholder="Hiring Requirement"
+                  rows="4"
+                  
+                ></textarea>
+                <button type="submit">Schedule Consultation</button>
+              </form>
         </div>
 
         <div className="consultation-info-container">

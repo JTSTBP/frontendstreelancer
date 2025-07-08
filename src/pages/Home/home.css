@@ -9,9 +9,9 @@
   --smallbg:#FFF7F2;
   --lightpurcolor:#5C0090;
 
-  --heading: clamp(0.6rem, 2.5vw, 5rem);
-  --mainparafont:clamp(3px, 0.9vw, 1.3rem);
-  --mainheadfont: clamp(1.2rem, 2.5vw, 2rem);
+  --heading: clamp(0.6rem, 3vw, 5rem);
+  --mainparafont:clamp(3px, 1.2vw, 1.3rem);
+  --mainheadfont: clamp(1.2rem, 2.5vw, 2.5rem);
   --subheadfont: clamp(0.9rem, 2vw, 1.3rem);
   --parafont: clamp(0.85rem, 1.8vw, 1.1rem);
   --smallparafont: clamp(0.65rem, 1vw, 1rem);
@@ -68,6 +68,9 @@ font-family: 'Roboto', sans-serif;
   font-size: var(--smallparafont);
   color: var(--textcolor);
 }
+.nav-links li:hover{
+  font-weight: bold;
+}
 
 .nav-buttons {
   display: flex;
@@ -101,18 +104,20 @@ border-radius: 4px;
   cursor: pointer;
  border: 1px solid  var(--primarycolor);
 }
-
+.standard-btn{
+width: 177px;
+  height: 48px;
+   border: none;
+  border-radius: 4px;
+    font-size: var(--btnfont);
+  font-weight: bold;
+}
 
 .btn-primary {
   background-color: var(--primarycolor);
   color: #fff;
-  border: none;
-  border-radius: 4px;
   cursor: pointer;
-  width: 177px;
-  height: 48px;
-  font-size: var(--btnfont);
-  font-weight: bold;
+
   
 }
 
@@ -194,7 +199,7 @@ color: #FFE8E8;
 }
 
 .hero-text p {
-  font-size: var(--parafont);
+  font-size: var(--subheadfont);
   margin-bottom: 25px;
 }
 
@@ -365,9 +370,10 @@ color: #FFE8E8;
 }
 @media (max-width: 890px) {
   
-  .btn-primary{
-        width: 135px;
-    height: 38px;
+  .standard-btn{
+               width: 123px;
+        height: 37px;
+        padding: 10px;
   
   }
 }

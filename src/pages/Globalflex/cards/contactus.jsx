@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { toast } from "react-toastify";
-import Backendurl from "../../../config"; 
+import Backendurl from "../../../config";
+import { contactSchema } from "../../../validations/validationSchema";
+
+
 
 const ContactForm = () => {
 
-
+const [errorMessages, setErrorMessages] = useState("");
+const errorRef = useRef(null);
 
   const [formData, setFormData] = useState({
     company: '',
@@ -36,6 +40,24 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const { error } = contactSchema.validate(formData, { abortEarly: false });
+
+  if (error) {
+  
+    const allErrors = error.details[0].message;
+    setErrorMessages(allErrors);
+    setTimeout(() => {
+      if (errorRef.current) {
+        errorRef.current.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }, 100); // slight delay ensures DOM update
+
+    return;
+  }
+
+
+
+  setErrorMessages(""); 
 
     try {
       const response = await fetch(`${Backendurl}/api/contact`, {
@@ -80,6 +102,8 @@ const ContactForm = () => {
 
       <div className="global-formbox">
         <h3>Contact Us</h3>
+        {errorMessages  && <p className='error-message' ref={errorRef} >{errorMessages}</p>}
+
         <form className="global-form" onSubmit={handleSubmit}>
           <label htmlFor="company">Company Name</label>
           <input type="text" id="company" value={formData.company} onChange={handleChange} />

@@ -111,7 +111,7 @@ const FindGreatWork = () => {
           <img src={handshakeImage} alt="Handshake" />
         </div>
       </div>
-        <button className="findgreat-hire-now" onClick={()=>{ navigate("/DEITalenthire")}}>Hire Now</button>
+        <button className="findgreat-hire-now standard-btn" onClick={()=>{ navigate("/DEITalenthire")}}>Hire Now</button>
           <div className="carousel-dots">
             {[...Array(cards.length / 2)].map((_, idx) => (
               <span

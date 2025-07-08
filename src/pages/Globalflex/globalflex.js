@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect ,useRef} from "react";
 import "./globalflex.css";
 
 import GlobalFlexNetwork from "./cards/globalflexbanner";
@@ -13,11 +13,19 @@ import SampleNavbar from "../Home/OtherpagesNavbar";
 
 
 const GlobalFlex = () => {
-    const { pathname } = useLocation();
-    useEffect(() => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }, [pathname]);
-  
+   const { pathname, hash } = useLocation();
+  const contactRef = useRef(null);
+ 
+   
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    if (hash === "#contact" && contactRef.current) {
+      setTimeout(() => {
+        contactRef.current.scrollIntoView({ behavior: "smooth" });
+      }, 300); // wait for page render
+    }
+  }, [pathname, hash]);
   return (
     <div>
       <SampleNavbar/>
@@ -25,7 +33,9 @@ const GlobalFlex = () => {
    <GlobalFlexFeatures/>
    <IndustrySolutions/>
    <HowItWorks/>
-   <ContactForm/>
+   <div ref={contactRef}>
+        <ContactForm />
+      </div>
    </div>
   );
 };

@@ -9,11 +9,15 @@ import DEIMetricsForm from './cards/info5';
 import DEIReviewConsent from './cards/info6';
 import Backendurl from "../../../config"; 
 import { toast } from "react-toastify";
+import { info1Schema } from "../../../validations/validationSchema"
+import CongratulationsPopup from './congratulationspopup'; // Make sure path is correct
 
 
 
 const Mainpopup = ({onClose}) => {
   const [stepIndex, setStepIndex] = useState(0);
+  const [showCongrats, setShowCongrats] = useState(false);
+
   const [infoData, setInfodata] = useState({
   info1: {},
   info2: {},
@@ -51,20 +55,6 @@ const steps = [
 ];
  
 
-// const handleSubmit = () => {
-
-//   ("Submitting DEI survey...");
-  
-
-//   alert("Your DEI survey has been submitted successfully!");
-
-//  setTimeout(() => {
-//     if (typeof onClose === 'function') {
-//       onClose(); // call the parent-provided close function
-//     }
-//     setStepIndex(0); // optional: reset to first step
-//   }, 2000)
-// };
 
 const handleSubmit = async () => {
   try {
@@ -77,23 +67,37 @@ const handleSubmit = async () => {
     });
 
     if (response.ok) {
-         toast.success( "Survey submitted successfully!");
+      setShowCongrats(true); // Show popup instead of toast
       setStepIndex(0);
-      
-      if (typeof onClose === 'function') onClose();
     } else {
-      toast.error( "Submission failed. Try again.");
+      toast.error("Submission failed. Try again.");
     }
   } catch (error) {
-  
     alert("An error occurred during submission.");
   }
 };
 
+const validateStep = () => {
+  if (stepIndex === 0) {
+    const { error } = info1Schema.validate(infoData.info1, { abortEarly: false });
+    if (error) {
+      error.details.forEach((err) => toast.error(err.message)); // Custom error display
+      return false;
+    }
+  }
+
+  return true;
+};
+
+  
 
   const nextStep = () => {
-    if (stepIndex < steps.length - 1) setStepIndex(stepIndex + 1);
-  };
+  if (stepIndex < steps.length - 1) {
+    if (validateStep()) {
+      setStepIndex(stepIndex + 1);
+    }
+  }
+};
 
   const prevStep = () => {
     if (stepIndex > 0) setStepIndex(stepIndex - 1);
@@ -132,6 +136,8 @@ const handleSubmit = async () => {
   )}
         </div>
       </div>
+      {showCongrats && <CongratulationsPopup />}
+
     </div>
   );
 };

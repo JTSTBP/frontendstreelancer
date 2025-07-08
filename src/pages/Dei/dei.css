@@ -486,6 +486,63 @@ color: var(--lightpurcolor);
 
 
 
+/* congratulationspopup */
+
+/* src/components/CongratulationsPopup.css */
+
+.congratulationspopup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.congratulationspopup-container {
+  background-color: #fefdf8;
+  border-radius: 20px;
+  padding: 40px 30px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.congratulationspopup-icon {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.congratulationspopup-title {
+  color: #5a00aa;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-family: 'Inter', 'Roboto', sans-serif;
+}
+
+.congratulationspopup-message {
+  color: #6a4cd6;
+  font-size: 14px;
+  margin-bottom: 24px;
+  font-family: 'Inter', 'Roboto', sans-serif;
+}
+
+.congratulationspopup-button {
+  background-color: #5a00aa;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-size: 13px;
+  cursor: pointer;
+  font-family: 'Inter', 'Roboto', sans-serif;
+}
 
 
 /* popupcard1 */
