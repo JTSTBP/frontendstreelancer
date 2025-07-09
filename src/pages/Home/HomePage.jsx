@@ -28,10 +28,10 @@ const HomePage = () => {
       <section className="hero">
         <div className="hero-text">
           <div>
-            <h1>Hire. Train. Empower.</h1>
+            <h1>Hire Smarter. Hire Women.
+</h1>
             <p>
-              India's largest Women-first platform for inclusive career
-              building.
+              Fully managed, inclusive women talent — curated, verified, and delivered in just 72 hours.
             </p>
             <div className="hero-buttons">
               <button className="btn-primary standard-btn" onClick={()=>{ navigate("/DEITalenthire")}}>Hire Now</button>
@@ -62,9 +62,9 @@ const HomePage = () => {
           <img src={womanLaptop} alt="Woman with laptop" />
         </div>
       </section>
-
+     <FindGreatWork/>
       <HeroServices />
-      <FindGreatWork/>
+ 
       <ExperienceBoxes />
       <StreelancerSteps />
       <CommunityBanner />

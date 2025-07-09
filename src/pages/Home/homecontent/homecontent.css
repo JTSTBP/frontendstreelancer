@@ -21,12 +21,19 @@
 .bluecard{
 background-color: var(--primarycolor);
 border-bottom-right-radius: 30px;
-ul{color: #FF9B6F;}}
+
+ul{color: #D3B5FF;}}
 .orgcard{
 background-color: var(--secondarycolor);
 border-top-left-radius: 30px; ul{
-  color: #EBDEFF;
+  color: #FF9B6F;
 }}
+.pinkcard{
+  background-color: #F3857E;
+  ul{
+    color: #8D3A35;
+  }
+}
 
 
 
@@ -73,7 +80,7 @@ border-top-left-radius: 30px; ul{
   padding-left: 20px;
   font-size: var(--smallparafont);
   line-height: 1.4;
-  margin-bottom: 151px;
+  margin-bottom: 209px;
   list-style-type: disclosure-closed;
 }
 .learn-button {
@@ -145,6 +152,9 @@ bottom:4px;
 }
 
 }
+
+
+
 
 
 /* CommunityBanner */

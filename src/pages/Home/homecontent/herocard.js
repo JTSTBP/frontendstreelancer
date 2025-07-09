@@ -20,7 +20,7 @@ function ServiceCard({ title, subtitle, points, mainImage, altText, className  ,
       </ul>
      
        
-        <button className="learn-button standard-btn" style={customStyle||{}}  onClick={handleNavigate}>Learn More</button>
+       
         <img src={mainImage} className="card-img img-fluid" alt={altText} />
       </div>
       

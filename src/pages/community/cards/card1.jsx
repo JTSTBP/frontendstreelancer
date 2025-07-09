@@ -3,11 +3,11 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 
 
 const faqs = [
-  { question: "Who can join Streelancer?", answer: "Anyone with skills and passion for freelancing can join Streelancer." },
-  { question: "Do I need prior work experience to apply?", answer: "No, freshers are welcome as long as they demonstrate potential and skills." },
-  { question: "How does the hiring process work?", answer: "Apply for jobs, get shortlisted, attend interviews, and start working remotely." },
-  { question: "Are all roles remote?", answer: "Yes, Streelancer focuses on flexible, remote opportunities." },
-  { question: "I’m an employer. How do I start hiring?", answer: "Create an employer account and post your job openings to start hiring." }
+  { question: "Who can join Streelancer?", answer: "Anyone who identifies as a woman, queer, person with disability, neurodiverse, returnee, or part of the silver generation is welcome!" },
+  { question: "Do I need prior work experience to apply?", answer: "Not necessarily. We have opportunities for freshers, returnees, and experienced professionals — plus training to help you get job-ready." },
+  { question: "How does the hiring process work?", answer: "Once you register and complete your profile, we’ll match you to job roles or training based on your skills and availability." },
+  { question: "Are all roles remote?", answer: "We offer remote, hybrid, project-based, and fractional roles — based on what suits your schedule and goals best." },
+  { question: "I’m an employer. How do I start hiring?", answer: "Just visit our \[Hire Talent] page or \[Book a Consultation]. We’ll guide you through your DEI-aligned hiring journey." }
 ];
 
 const FAQSection = () => {

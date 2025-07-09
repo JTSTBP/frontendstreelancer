@@ -28,14 +28,14 @@ const FindGreatWork = () => {
    const navigate = useNavigate();
   const cards = [
     {
-      title: "EdTech",
-      description: "Admissions callers, academic support\nCX desks for hybrid and online education",
+      title: "Startups, SaaS & Tech",
+      description: "Roles: Content moderation, lead generation, CRM hygiene, email/chat support.",
       icon: grt1,
       class:"blue"
     },
     {
       title: "Healthcare",
-      description: "Regulatory desk, support execs\nHybrid helpdesks for pharma & wellness",
+      description: "Regulatory desk, support execs  Hybrid helpdesks for pharma & wellness",
       icon: grt2,
        class:"orange"
     },
@@ -79,9 +79,10 @@ const FindGreatWork = () => {
 
   return (
     <div className="findgreat-work-container">
-      <h2 className="findgreat-heading">Find Great Work</h2>
+      <h2 className="findgreat-heading">Hire DEI-Verified Talent</h2>
       <p className="findgreat-subheading">
-        Meet Clients you’re excited to work with and take your career or business to new heights
+       Partner with talented, driven women to grow your business while making a real  
+                                                                difference.
       </p>
       <div className="findgreat-work-content">
         <div className="findgreat-industries-carousel">
