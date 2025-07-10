@@ -15,6 +15,7 @@ import GlobalFlex from "./pages/Globalflex/globalflex";
 import Deimain from "./pages/Dei/Deimain";
 import Deitalent from "./pages/Deitalent/Deitalent";
 import Community from "./pages/community/community";
+import FoundersMistakes from "./pages/Services/communityfounder";
 
 
 
@@ -37,10 +38,11 @@ export default function App() {
         <Route path="/Signup" element={<Signup />} />
         <Route path="/login" element={<LoginPage/>} />
           <Route path="/Registration" element={<RegistrationPage/>} />
-          <Route path="/GlobalFlex" element={<GlobalFlex/>} />
+          <Route path="/Remotetalent" element={<GlobalFlex/>} />
            <Route path="/DEITalent" element={<Deimain/>} />
              <Route path="/DEITalenthire" element={<Deitalent/>} />
              <Route path="/Community" element={<Community/>} />
+              <Route path="/Community/foundermistake" element={<FoundersMistakes />} />
       </Routes>
     </Router>
        <ToastContainer position="top-right" autoClose={3000} /></>

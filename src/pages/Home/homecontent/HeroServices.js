@@ -43,7 +43,7 @@ function HeroServices() {
           ]}
           
            mainImage={img2}
-      navigateTo="/GlobalFlex"
+      navigateTo="/Remotetalent"
           altText="Marketplace"
         />
        

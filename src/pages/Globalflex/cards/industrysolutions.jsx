@@ -79,9 +79,12 @@ const solutions = [
 const IndustrySolutions = () => {
   return (
     <div className="industry-container">
-      <h2>Industry Solutions</h2>
+      <h2>Industries We Serve
+</h2>
       <p className="subtitle">
-        Specialized talent solutions tailored to the unique requirements of your industry.
+       Your Industry, Our Expertise — Delivered Remotely.
+Remote-ready, managed talent solutions tailored to your business needs.
+
       </p>
       <div className="cards-container">
         {solutions.map((item, index) => (

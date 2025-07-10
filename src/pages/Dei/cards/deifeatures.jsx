@@ -1,19 +1,19 @@
 
 
-import React from 'react';
+import React ,{forwardRef} from 'react';
 import { useNavigate } from 'react-router-dom';
 import bigCircle from '../../../images/circledei.png';
 import arrowCircle from '../../../images/arrow.png';
 
-const Deifeatures = ({ onTakeSurveyClick }) => {
+const Deifeatures =forwardRef( ({ onTakeSurveyClick },ref)=> {
    const navigate = useNavigate();
 
   const handleBookSession = () => {
-    navigate('/globalflex#contact');
+    navigate('/Remotetalent#contact');
   };
 
   return (
-    <div className="flex-features-container">
+    <div ref={ref} className="flex-features-container">
       <div className="left-section">
         <img src={arrowCircle} alt="Big Circle" className="big-circle" />
         <h2>Take the DEI Score Test Today.</h2>
@@ -62,6 +62,6 @@ const Deifeatures = ({ onTakeSurveyClick }) => {
       </div>
     </div>
   );
-};
+});
 
 export default Deifeatures;

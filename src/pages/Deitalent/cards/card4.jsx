@@ -52,7 +52,7 @@ const IndustriesSection = () => {
     <section className="industries-section">
       <h2 className="industries-title">Industries We Serve</h2>
       <p className="industries-subtitle">
-        Our trained talent fits seamlessly into various sectors, providing specialized skills for each industry
+        Our trained talent fits seamlessly into various sectors, providing specialized skills for each industry.
       </p>
 
       <div className="industries-content">

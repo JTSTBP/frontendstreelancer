@@ -46,7 +46,7 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
 
       <ul className={`nav-links ${menuOpen ? "open" : "close"}`}>
         <li onClick={() => {navigate("/");setMenuOpen(false)}}>Home</li>
-        <li onClick={() => {navigate("/GlobalFlex");setMenuOpen(false)}}>Remote Talent Network</li>
+        <li onClick={() => {navigate("/DEITalent");setMenuOpen(false)}}>DEI Score</li>
 
         {/* DEI Talent Network with dropdown */}
         <li
@@ -55,16 +55,16 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
           onClick={toggleDEIDropdown}
         >
           <div className="dropdown-header">
-            DEI Talent 
+           For Employer
             <MdKeyboardArrowDown />
           </div>
           {showDEIDropdown && (
             <ul className="dropdown-menu">
-              <li onClick={() => { navigate("/DEITalent"); setMenuOpen(false); setShowDEIDropdown(false); }}>
-                DEI Talent Network
-              </li>
               <li onClick={() => { navigate("/DEITalenthire"); setMenuOpen(false); setShowDEIDropdown(false); }}>
-                DEI Talent Hire
+               DEI Talent Solution 
+              </li>
+              <li onClick={() => { navigate("/Remotetalent"); setMenuOpen(false); setShowDEIDropdown(false); }}>
+               Remote Talent Solution 
               </li>
             </ul>
           )}
