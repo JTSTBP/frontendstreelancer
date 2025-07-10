@@ -4,7 +4,13 @@
 
   padding:  2rem;
   text-align: center;
-
+  background-color: var(--bgcolor); /* fallback color */
+  background-image: url('../../images/communitybg.png'); /* update path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 10;
 }
 
 .communitysection-badge {
@@ -72,13 +78,15 @@
 .communitysection-info-cards {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 6.5rem;
   flex-wrap: wrap;
+  position: relative;
+   z-index: 10;
 }
 
 .communitysection-card {
   background-color: white;
-  border-radius: 1rem;
+  border-radius: 2rem;
   overflow: hidden;
   max-width: 350px;
   text-align: center;
@@ -97,6 +105,25 @@
   font-weight: 600;
   color:var(--primarycolor);
   border-top: 1px solid #e0c9f3;
+}
+
+.lines-image3497{
+  position: absolute;
+  right: 0;
+  top: 6rem;
+   z-index: 1;
+}
+.lines-image23497{
+  position: absolute;
+  left: 0;
+  top: 6rem;
+  z-index: 1;
+}
+
+@media screen and (max-width:886px) {
+  .lines-image3497, .lines-image23497{
+    display:none;
+  }
 }
 
 /* communityblogs */
