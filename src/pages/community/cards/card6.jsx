@@ -2,6 +2,7 @@ import React from "react";
 import blog1 from "../../../images/blog1.png"
 import blog2 from "../../../images/blog2.png"
 import blog3 from "../../../images/blog3.png"
+import { useNavigate } from 'react-router-dom';
 
 const blogData = [
   {
@@ -10,6 +11,7 @@ const blogData = [
     title: "Not Sure Which Hiring Strategy Fits You Best?",
     description:
       "From quick staffing to strategic talent acquisition, we tailor solutions that grow with your business.",
+      navigate:"/Community/foundermistake"
   },
   {
     image: blog2,
@@ -17,6 +19,7 @@ const blogData = [
     title: "Attitude or Skill? Why Not Both.",
     description:
       "Future-ready teams need more than just qualifications—they need the right mindset and build a team that grows with you.",
+          navigate:"/Community/Skills"
   },
  
   {
@@ -25,10 +28,12 @@ const blogData = [
     title: "Hiring Doesn’t Have to Be a Guessing Game",
     description:
       "Avoid common hiring pitfalls, tap into industry expertise, and scale your team the right way from day one.",
+        navigate:"/Community/Talent"
   },
 ];
 
 const CommunityBlog = () => {
+    const navigate=useNavigate()
   return (
     <section className="communityblog">
       <h2>From the Community Blog</h2>
@@ -50,7 +55,7 @@ const CommunityBlog = () => {
               </div>
               <div className="communityblog-title">{item.title}</div>
               <div className="communityblog-desc">{item.description}</div>
-              <button className="communityblog-learn-more">Learn More</button>
+              <button className="communityblog-learn-more" onClick={() => navigate(item.navigate)}>Learn More</button>
             </div>
           ))}
         </div>

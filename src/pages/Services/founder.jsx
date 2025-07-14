@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 
 
 
@@ -11,6 +13,11 @@ const FounderMistake = ({
   image2,
   hiringMistakes = []
 }) => {
+   const { pathname } = useLocation();
+
+    useEffect(() => {
+       window.scrollTo({ top: 0, behavior: "smooth" });
+     }, [pathname]);
   return (
     <div className="founder-container">
       <div className="mobile-scaling-container">

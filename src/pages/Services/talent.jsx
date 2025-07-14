@@ -10,7 +10,7 @@ import FounderMistake from "./founder";
 const Talent = () => {
   return (
     <FounderMistake
-      mobileTitle={`BUILDING A WINNER TALENT ACQUISITION STRATEGY WITH RAAS .`}
+      mobileTitle={`BUILDING A WINNER TALENT ACQUISITION STRATEGY WITH RAAS.`}
       image1={image1}
       mobileCaption="Why RAAS Is the Future of Hiring in 2025 "
       mobileDescription={`In today’s ultra-competitive and rapidly evolving job market, traditional hiring models are falling behind. Long hiring cycles, high agency costs, and limited in-house bandwidth are making it harder than ever for businesses to attract and retain the right talent—especially at scale.
