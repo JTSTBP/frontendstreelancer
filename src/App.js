@@ -17,6 +17,8 @@ import Deitalent from "./pages/Deitalent/Deitalent";
 import Community from "./pages/community/community";
 import FoundersMistakes from "./pages/Services/communityfounder";
 import ComingSoon from "./pages/Academy/academypage";
+import Skills from "./pages/Services/skills";
+import Talent from "./pages/Services/talent";
 
 
 
@@ -45,6 +47,9 @@ export default function App() {
              <Route path="/Community" element={<Community/>} />
                      <Route path="/Academy" element={<ComingSoon/>} />
               <Route path="/Community/foundermistake" element={<FoundersMistakes />} />
+               <Route path="/Community/Skills" element={<Skills />} />
+                <Route path="/Community/Talent" element={<Talent />} />
+               
       </Routes>
     </Router>
        <ToastContainer position="top-right" autoClose={3000} /></>

@@ -25,6 +25,8 @@ const steps = [
 
 function RegistrationPage() {
   const [validationError, setValidationError] = useState("");
+  const [backendError, setBackendError] = useState("");
+
 
   const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(0);
@@ -93,16 +95,19 @@ const handleSubmit = async () => {
     });
     const data = await response.json();
 
+    console.log(data,"data")
 
+  
 
     if (response.ok) {
-      setShowPopup(true);
-    } else {
-      alert("Failed to submit registration.");
-    }
+  setShowPopup(true);
+  setBackendError(""); // clear previous errors
+} else {
+  setBackendError(data?.message || "Failed to submit registration.");
+}
   } catch (error) {
     console.error("Error submitting form:", error);
-    alert("An error occurred.");
+  setBackendError("An error occurred while submitting. Please try again.");
   }
 };
 
@@ -154,6 +159,14 @@ navigate("/")
         {validationError && (
   <div className="validation-error">
     {validationError}
+  </div>
+
+  
+)}
+
+{backendError && (
+  <div className="backend-error-message">
+    {backendError}
   </div>
 )}
 
