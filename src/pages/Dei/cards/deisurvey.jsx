@@ -9,31 +9,31 @@ const solutions = [
     title: '5-Minute Questionnaire',
     image: tech,
     color: 'ind1',
-    list: "Our streamlined assessment can be completed in just 5 minutes, providing valuable insights without disrupting your workday.",
+    list: 'Complete our streamlined assessment in just 5 minutes — quick, insightful, and workplace-friendly.',
   },
   {
     title: 'Comprehensive Coverage',
     image: business,
     color: 'ind2',
-    list:"Our survey covers key DEI dimensions including gender equality, disability inclusion, LGBTQ+ representation, and returnee integration.",
+    list: 'Covers all key DEI dimensions: gender, disability, LGBTQ+ inclusion, and returnee integration.',
   },
   {
     title: 'Instant Scoring',
     image: sales,
     color: 'ind3',
-    list:"Receive immediate results categorized into three levels: Aware, Active, and Impact, with actionable recommendations for improvement",
+    list: 'Get immediate results across three levels — Aware, Active, Impact — with actionable next steps.',
   },
- 
- 
- 
 ];
+
 
 const Deisurvey = () => {
   return (
     <div className="industry-container">
-      <h2>Our Comprehensive DEI Survey</h2>
+      <h2>Our Comprehensive DEI Survey
+</h2>
       <p className="subtitle">
-       A data-driven approach to understanding and improving your organization's inclusion metrics
+       A data-driven approach to understanding and improving your organization’s inclusion metrics.
+
       </p>
       <div className="cards-container">
         {solutions.map((item, index) => (

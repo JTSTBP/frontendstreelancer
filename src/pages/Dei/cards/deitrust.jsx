@@ -1,8 +1,9 @@
 import React from 'react';
 import girlImage from '../../../images/certificate.png'; // replace with your image path
 import step1 from "../../../images/trust1.png"
-import step2 from "../../../images/trust2.png"
-import step3 from "../../../images/trust3.png"
+
+import step2 from "../../../images/trust3.png"
+import step3 from "../../../images/trust2.png"
 
 
 const Deitrust = () => {
@@ -24,7 +25,7 @@ const Deitrust = () => {
     {
       title: 'Stand Out in the Market',
       description:
-        '',
+        'Show your commitment to diversity and stand out as a forward-thinking, trusted brand.',
          color:"#ECEAEA"
          ,  img:step3
     },

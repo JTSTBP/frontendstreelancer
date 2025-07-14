@@ -162,7 +162,9 @@ width: 177px;
 
 .sample-navbar{
   background-color: var(--primarycolor);
-  padding: 20px;
+
+  display: flex;
+  justify-content: space-between;
   
   
 .nav-links{justify-content: center; .for-color{
@@ -175,6 +177,15 @@ color: #FFE8E8;
 
 .sample-navbar .hamburger{
   color: #FFE8E8;
+}
+
+@media screen and (max-width:760px){
+  .sample-navbar .logo{
+    display: none;
+  }
+  .sample-navbar{
+    display: block;
+  }
 }
 /* ===== HERO SECTION ===== */
 .hero {

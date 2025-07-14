@@ -41,7 +41,7 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <img src={require("../../images/logo.png")} alt="Streelancer Logo" />
+        <img src={require("../../images/logo1.png")} alt="Streelancer Logo" />
       </div>
 
       <ul className={`nav-links ${menuOpen ? "open" : "close"}`}>
@@ -71,7 +71,7 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
         </li>
 
         
-        <li onClick={() => setMenuOpen(false)}>Academy</li>
+        <li onClick={() =>{ navigate("/Academy"); setMenuOpen(false)}}>Academy</li>
         <li onClick={() => { navigate("/Community");setMenuOpen(false)}}>Community</li>
 
         <li>

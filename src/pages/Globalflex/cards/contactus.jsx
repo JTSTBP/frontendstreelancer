@@ -16,6 +16,7 @@ const errorRef = useRef(null);
      phone: '',
     email: '',
     regions: [],
+     industries: "", 
     workModel: 'Full time remote',
     country: 'Your country',
     teamSize: 15,
@@ -23,6 +24,7 @@ const errorRef = useRef(null);
   });
 
   const handleChange = (e) => {
+    console.log(formData,"formData")
     const { id, value } = e.target;
     setFormData({ ...formData, [id]: value });
   };
@@ -93,10 +95,10 @@ const errorRef = useRef(null);
   return (
     <div className="contact-wrapper">
       <div className="global-header">
-        <h2>Ready to Build Your Global Team?</h2>
+        <h2>Ready to Build Your Remote Team?
+</h2>
         <p>
-          Connect with our team to discuss your global talent needs and discover how our flexible
-          workforce solutions can help your business thrive across borders.
+        Hire scalable remote professionals — fast, flexible, and cost-efficient. Start growing your business today.
         </p>
       </div>
 
@@ -137,7 +139,30 @@ const errorRef = useRef(null);
               </div>
             </div>
           </div>
+         <div className="global-formrow">
+  <div>
+    <label htmlFor="industry">Select Industry</label>
+    <select
+      id="industry"
+      value={formData.industry}
+      onChange={handleChange}
+    >
+      <option value="">Select an industry</option>
+      {[
+        "Accounting", "Advertising", "Aerospace", "Agriculture", "Automotive",
+        "Biotechnology", "Construction", "Consulting", "Education", "Energy",
+        "Finance", "Food & Beverage", "Healthcare", "Hospitality",
+        "Information Technology", "Legal", "Manufacturing", "Media",
+        "Real Estate", "Retail", "Telecommunications", "Transportation",
+        "Travel", "Utilities"
+      ].map((industry) => (
+        <option key={industry} value={industry}>{industry}</option>
+      ))}
+    </select>
+  </div>
+</div>
 
+         
           <div className="global-formrow">
             <div>
               <label htmlFor="workModel">Preferred Work Model</label>

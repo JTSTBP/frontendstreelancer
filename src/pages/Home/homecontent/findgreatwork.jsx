@@ -28,42 +28,45 @@ const FindGreatWork = () => {
    const navigate = useNavigate();
   const cards = [
     {
-      title: "Startups, SaaS & Tech",
-      description: "Roles: Content moderation, lead generation, CRM hygiene, email/chat support.",
+      title: "Manufacturing & EMS",
+      description: "Roles: Documentation, backend coordination, customer support.",
       icon: grt1,
       class:"blue"
     },
-    {
-      title: "Healthcare",
-      description: "Regulatory desk, support execs  Hybrid helpdesks for pharma & wellness",
+     {
+      title: " Retail, D2C & E-Commerce",
+      description: "Roles: Catalog management, customer queries, digital campaign assistants.",
       icon: grt2,
-       class:"orange"
+        class:"orange"
     },
-    {
-      title: "Retail",
-      description: "Customer engagement, in-store support\nOmnichannel CX solutions",
-      icon: grt3,
-        class:"blue"
-    },
-    {
-      title: "FinTech",
-      description: "KYC support, digital onboarding\nFinancial product assistance",
+     {
+      title: "BFSI",
+      description: "Roles: Customer care, document verification, tele-verification.",
       icon: grt4,
-       class:"orange"
+       class:"blue"
     },
     {
-      title: "Logistics",
-      description: "Fleet tracking, delivery updates\nCustomer queries resolution",
-      icon: grt5,
+      title: "Healthcare & Pharmaceuticals",
+      description: "Roles: Teleconsultation support, claims processing, regulatory documentation.",
+      icon: grt3,
+       class:"orange"
+    },
+   
+   
+    {
+      title: "Logistics, Infrastructure & Construction",
+      description: "Ticket desk, route support, virtual admins  Daily ops support with zero infra burden",
+      icon: grt6,
         class:"blue"
     },
+
     {
-      title: "Travel & Tourism",
-      description: "Booking help, itinerary changes\nReal-time chat & support",
-      icon: grt6,
+      title: "FMCG & Consumer Goods",
+      description: "Roles: Telesales, order processing, digital outreach, MIS reporting.",
+      icon: grt5,
        class:"orange"
-    },
-  ];
+    }
+  ]
 
   const [current, setCurrent] = useState(0);
 
@@ -81,8 +84,9 @@ const FindGreatWork = () => {
     <div className="findgreat-work-container">
       <h2 className="findgreat-heading">Hire DEI-Verified Talent</h2>
       <p className="findgreat-subheading">
-       Partner with talented, driven women to grow your business while making a real  
-                                                                difference.
+    Partner with skilled, diverse women to grow your business — while making a measurable impact.
+
+
       </p>
       <div className="findgreat-work-content">
         <div className="findgreat-industries-carousel">
@@ -124,6 +128,7 @@ const FindGreatWork = () => {
           </div>
     </div>
   );
+  
 };
 
 export default FindGreatWork;

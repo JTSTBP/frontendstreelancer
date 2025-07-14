@@ -35,7 +35,7 @@ const HomePage = () => {
             </p>
             <div className="hero-buttons">
               <button className="btn-primary standard-btn" onClick={()=>{ navigate("/DEITalenthire")}}>Hire Now</button>
-              <button className="btn-primary btn-outline standard-btn">Register Now</button>
+              <button className="btn-primary btn-outline standard-btn" onClick={()=>{ navigate("/Registration")}}>Register Now</button>
             </div>
             <ul className="features">
               <li>
@@ -49,10 +49,12 @@ const HomePage = () => {
                   <img src={require("../../images/done.png")} />
                 </span>
                 Vetted profiles, ready to get hired
+
               </li>
               <li>
                 <img src={require("../../images/done.png")} />
-                Courses + mentorship for career returnees
+                Career returnee support through courses & mentorship
+
               </li>
             </ul>
           </div>

@@ -1,6 +1,8 @@
-
+import { useNavigate } from "react-router-dom";
 
 function CommunityBanner() {
+  const navigate = useNavigate();
+
   return (
     <section className="community-section">
 
@@ -10,10 +12,10 @@ function CommunityBanner() {
   <div className="community-text">
     <h2>Join Streelancer Community!</h2>
     <p>
-      A safe space to learn, share, and grow — built for women, queer <br /> 
-      talent, and second-career professionals.
+     A safe space to learn, connect, and grow — built for women, queer talent, and second-career professionals.
+
     </p>
-    <button className="join-btn">Join Community</button>
+    <button className="join-btn" onClick={()=>{ navigate("/Community")}}>Join Community</button>
   </div>
 </div>
 
@@ -21,7 +23,7 @@ function CommunityBanner() {
       {/* Footer */}
       <footer className="footer">
         <div className="footer-logo">
-          <img src={require("../../../images/logo.png")}/>
+          <img src={require("../../../images/logo1.png")}/>
           <p>India’s largest women-first platform for inclusive career building.</p>
           <div className="social-icons">
             <i className="fab fa-linkedin"></i>

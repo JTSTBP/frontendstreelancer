@@ -10,7 +10,7 @@ const GlobalFlexFeatures = () => {
         <img src={arrowCircle} alt="Big Circle" className="big-circle" />
         <h2>Why Streelancer Remote Talent?</h2>
         <p>
-          Our global talent network connects forward-thinking companies with exceptional professionals for flexible remote positions worldwide.
+        Build your team in just 72 hours and save up to 40% without compromising quality.
         </p>
 
         <div className="image-stack">
@@ -21,31 +21,36 @@ const GlobalFlexFeatures = () => {
       </div>
 
       <div className="right-section">
-        <div className="feature-item">
-          <h3>1. Managed Service</h3>
-          <p>
-           We hire, onboard & manage your team, so you can<br/>focus on your core business.
-          </p>
-        </div>
-        <div className="feature-item">
-          <h3>2. Flexible Hiring</h3>
-          <p>
-           Choose from full-time, project-based, or consulting<br/>roles to match your needs.
-          </p>
-        </div>
-        <div className="feature-item">
-          <h3>3. Cost-Saving</h3>
-          <p>
-           Save up to 40% over in-house teams without<br/>compromising on quality.
-          </p>
-        </div>
-        <div className="feature-item">
-          <h3>4. Quick-Start</h3>
-          <p>
-          Deploy trained talent in just 72 hours and<br/>accelerate your business growth.
-          </p>
-        </div>
-      </div>
+  <div className="feature-item">
+    <h3>1. Managed Service</h3>
+    <p>
+      We hire, onboard, and oversee your team so you can<br />
+      focus on your core business.
+    </p>
+  </div>
+  <div className="feature-item">
+    <h3>2. Flexible Hiring</h3>
+    <p>
+      Full-time, project-based, or consulting —<br />
+      choose what fits your needs.
+    </p>
+  </div>
+  <div className="feature-item">
+    <h3>3. Cost Savings</h3>
+    <p>
+      Save up to 40% compared to in-house teams<br />
+      without compromising on quality.
+    </p>
+  </div>
+  <div className="feature-item">
+    <h3>4. Quick Start</h3>
+    <p>
+      Deploy trained talent within 72 hours and<br />
+      accelerate your growth.
+    </p>
+  </div>
+</div>
+
     </div>
   );
 };

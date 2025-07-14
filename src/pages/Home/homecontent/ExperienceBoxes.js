@@ -14,9 +14,11 @@ function CareerPathCards() {
     const navigate = useNavigate();
   return (
     <section className="career-section">
-      <h2 className="section-title">Find Your Fit, Your Way</h2>
+      <h2 className="section-title">Your Next Chapter Starts Here
+
+</h2>
       <p className="section-subtitle">
-        Explore curated freelance and job-ready roles by category—designed for every stage, story, and strength.
+       Opportunities crafted for every stage of your journey — return, reimagine, and rise.
       </p>
 
       <div className="card-container">

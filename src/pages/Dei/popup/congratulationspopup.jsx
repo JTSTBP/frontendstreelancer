@@ -4,11 +4,12 @@ import React from 'react';
 import medalIcon from '../../../images/medalicon.png';
 import { useNavigate } from 'react-router-dom';
 
-const CongratulationsPopup = ({onClose}) => {
+const CongratulationsPopup = ({onClose,onCloseMain}) => {
   const navigate = useNavigate();
 
   const handleStayTuned = () => {
-    onClose()
+   if (onClose) onClose();
+  if (onCloseMain) onCloseMain(); 
   };
 
   return (

@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{useRef} from 'react';
 import RemoteCard from './carditem1';
 
 import hir1 from "../../../images/hir1.png"
@@ -63,6 +63,8 @@ const hiringModelsData = {
 
 
 const HiringCard = () => {
+
+
   return (
     <div className='main-hiringcard'>
         <h1>Flexible Hiring Models</h1>

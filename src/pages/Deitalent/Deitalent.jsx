@@ -1,6 +1,6 @@
 
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import "./Deitalent.css";
 import { useLocation } from "react-router-dom";
 import Deitalentbanner from "./cards/card1";
@@ -14,23 +14,44 @@ import SampleNavbar from "../Home/OtherpagesNavbar";
 
 
 const Deitalent = () => {
-  const { pathname } = useLocation();
-
+ const { pathname } = useLocation();
+  const hiringRef = useRef(null);
+  const contactRef = useRef(null);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [pathname]);
 
+const scrollToHiringCard = () => {
+  if (hiringRef.current) {
+    hiringRef.current.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
+const scrollToContactForm = () => {
+  if (contactRef.current) {
+    contactRef.current.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
+
+
   return (
     <div>
          <SampleNavbar/>
      <Deitalentbanner/>
-     <Deifeatures/>
+     <Deifeatures   onTakeSurveyClick={scrollToHiringCard} 
+  onBookConsultClick={scrollToContactForm}/>
      <WhyChooseUs/>
       <IndustriesSection/>
      <HowItWorks/>
-     <HiringCard/>
-     <ContactForm/>
+      <div ref={hiringRef}>
+        <HiringCard />
+      </div>
+   
+     <div ref={contactRef}>
+  <ContactForm />
+</div>
     
     </div>
   );

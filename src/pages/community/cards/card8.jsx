@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import image1 from "../../../images/testimonial1.png"
-
+import image2 from "../../../images/testimonial2.jpg"
+import image3 from "../../../images/testimonial3.jpg"
 
 const testimonials = [
   {
@@ -13,13 +14,13 @@ const testimonials = [
     name: "Anita R., Hyderabad",
     role: "UX Designer",
     message: "I found confidence again and now work remotely with international clients thanks to Streelancer.",
-    image: "/images/user2.png",
+    image:image2,
   },
   {
     name: "Priya M., Delhi",
     role: "Content Strategist",
     message: "The mentorship was life-changing. I'm working full-time with a global brand from my hometown.",
-    image: "/images/user3.png",
+    image: image3,
   },
 ];
 

@@ -27,9 +27,10 @@ const StreelancerSteps = () => {
      const navigate = useNavigate();
   return (
     <div className="main-container">
-      <h2 className="title">Find Your Fit, Your Way</h2>
+      <h2 className="title">Your Journey, Your Way
+</h2>
       <p className="subtitle">
-        Explore curated freelance and job-ready roles by category—designed for every stage, story, and strength.
+Step into curated, job-ready opportunities — tailored to your skills, goals, and story.
       </p>
 
       {/* Top Steps */}
@@ -73,15 +74,16 @@ const StreelancerSteps = () => {
           <h3>Why Employers Choose Streelancer ?</h3>
           <div className="employer-point">
             <strong>Diverse Talent Pool</strong>
-            <p>Access CXOs, Virtual Assistants, SDRs, Designers, and more from backgrounds.</p>
+            <p>Professionals with versatile skills, backgrounds, and more from untapped segments.
+</p>
           </div>
           <div className="employer-point">
             <strong>Verified Profiles with DEI Tags</strong>
-            <p>All candidates are pre-vetted with verified skills and clear diversity indicators to support your inclusion goals.</p>
+            <p>All candidates are assessed for skills and inclusivity, ensuring workplace equity</p>
           </div>
           <div className="employer-point">
             <strong>DEI Hiring Dashboard</strong>
-            <p>Track and report on your diversity hiring metrics with our comprehensive analytics dashboard.</p>
+            <p>Track impact and inclusion through your personalized hiring dashboard.</p>
           </div>
         </div>
 

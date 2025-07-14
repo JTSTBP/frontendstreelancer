@@ -86,10 +86,10 @@ const errorRef = useRef(null);
   return (
     <div className="contact-wrapper">
       <div className="global-header">
-        <h2>Ready to Build Your Global Team?</h2>
+        <h2>Ready to Build Your DEI Workforce?</h2>
         <p>
-          Connect with our team to discuss your global talent needs and discover how our flexible
-          workforce solutions can help your business thrive across borders.
+        Connect with our team to discuss your hiring needs and discover how Streelancer can help you  
+                                                                achieve your diversity goals
         </p>
       </div>
 

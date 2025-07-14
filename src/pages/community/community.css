@@ -63,9 +63,8 @@
   color: white;
   border: none;
 }
-
-.communitysection-btn.outline {
-  background-color: transparent;
+.communitysection-btn.primary:hover{
+   background-color: transparent;
   border: 2px solid var(--primarycolor);
   color: var(--primarycolor);
 }
@@ -73,6 +72,14 @@
 .communitysection-btn.outline:hover {
   background-color: var(--primarycolor);
   color: white;
+  border: none;
+}
+
+.communitysection-btn.outline {
+   background-color: transparent;
+  border: 2px solid var(--primarycolor);
+  color: var(--primarycolor);
+
 }
 
 .communitysection-info-cards {
@@ -383,15 +390,15 @@ margin: 10px auto;
 }
 
 .arrow-btn {
-  background-color: #d9c8f5;
-  border: none;
-  border-radius: 50%;
-  font-size: 1.25rem;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  color: #5c0090;
-  transition: transform 0.2s ease;
+     background-color: #d9c8f5;
+    border: none;
+    border-radius: 50%;
+    color: #5c0090;
+    cursor: pointer;
+    font-size: 1.25rem;
+    height: 45px;
+    transition: transform .2s ease;
+    width: 19px;
 }
 
 .arrow-btn:hover {

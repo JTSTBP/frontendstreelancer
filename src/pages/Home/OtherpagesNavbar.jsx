@@ -39,9 +39,11 @@ const SampleNavbar = ({ isLoggedIn, setIsLoggedIn }) => {
   }, []);
 
   return (
-    <nav className="sample-navbar">
+    <nav className="sample-navbar navbar">
      
-
+  <div className="logo">
+        <img src={require("../../images/logo.png")} alt="Streelancer Logo" />
+      </div>
       <ul className={`nav-links ${menuOpen ? "open" : "close"}`}>
         <li onClick={() => {navigate("/");setMenuOpen(false)}}className="for-color">Home</li>
 
@@ -70,8 +72,8 @@ const SampleNavbar = ({ isLoggedIn, setIsLoggedIn }) => {
         </li>
 
         
-        <li onClick={() => setMenuOpen(false)} className="for-color">Academy</li>
-        <li onClick={() => setMenuOpen(false)} className="for-color">Community</li>
+        <li onClick={() => { navigate("/Academy"); setMenuOpen(false)}} className="for-color">Academy</li>
+        <li onClick={() =>{ navigate("/Community");  setMenuOpen(false)}} className="for-color">Community</li>
 
       
         

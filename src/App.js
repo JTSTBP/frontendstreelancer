@@ -16,6 +16,7 @@ import Deimain from "./pages/Dei/Deimain";
 import Deitalent from "./pages/Deitalent/Deitalent";
 import Community from "./pages/community/community";
 import FoundersMistakes from "./pages/Services/communityfounder";
+import ComingSoon from "./pages/Academy/academypage";
 
 
 
@@ -42,6 +43,7 @@ export default function App() {
            <Route path="/DEITalent" element={<Deimain/>} />
              <Route path="/DEITalenthire" element={<Deitalent/>} />
              <Route path="/Community" element={<Community/>} />
+                     <Route path="/Academy" element={<ComingSoon/>} />
               <Route path="/Community/foundermistake" element={<FoundersMistakes />} />
       </Routes>
     </Router>

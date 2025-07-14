@@ -68,6 +68,7 @@ const handleSubmit = async () => {
 
     if (response.ok) {
       setShowCongrats(true); // Show popup instead of toast
+     
       setStepIndex(0);
     } else {
       toast.error("Submission failed. Try again.");
@@ -136,7 +137,9 @@ const validateStep = () => {
   )}
         </div>
       </div>
-      {showCongrats && <CongratulationsPopup />}
+      {showCongrats && (
+  <CongratulationsPopup onClose={() => setShowCongrats(false)} onCloseMain={()=>onClose()} />
+)}
 
     </div>
   );

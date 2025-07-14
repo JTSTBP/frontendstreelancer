@@ -8,23 +8,23 @@ import step4 from "../../../images/step4.png"
 const HowItWorks = () => {
  const steps = [
   {
-    title: 'Share Role Requirements',
+    title: 'Share Your Role Requirements',
     description:
-      "Tell us about your business needs and the specific roles you're looking to fill.",
+      "Tell us what roles you need and the skills you’re looking for.",
     color: '#f8d7e0',
     img: step1, // Assuming you're using the same step image variable names
   },
   {
     title: 'Get Vetted Profiles',
     description:
-      "We’ll match you with pre-screened professionals who have the skills and experience you need.",
+      "We share pre-screened professionals ready to join your team.",
     color: '#e5d8f6',
     img: step2,
   },
   {
     title: 'Onboard in 72 Hours',
     description:
-      'We manage performance and daily operations, so you can focus on outcomes and business growth.',
+      'We handle hiring formalities so your team can get started quickly.',
     color: '#f8d7e0',
     img: step3,
   },
@@ -35,7 +35,8 @@ const HowItWorks = () => {
     <div className="howitworks-container">
         <h1>How It Works</h1>
         <p className="subtitle">
-          Our streamlined process connects you with the right global talent for your specific needs.
+          Our simple process connects you with the right remote talent — fast and hassle-free.
+
         </p>
         <div className='howitworks-content'>
          <div className="howitworks-image">

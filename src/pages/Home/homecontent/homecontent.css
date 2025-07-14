@@ -12,7 +12,7 @@
   display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    /* gap: 20px; */
+    gap: 20px;
    
     /* margin: 10px;*/
 }
@@ -154,6 +154,51 @@ bottom:4px;
 }
 
 
+
+.offer-section {
+  position: relative;
+    width: 324px;
+    height: 442px;
+    overflow: hidden;
+  border-radius: 10px;
+}
+
+.offer-section .card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+   cursor: pointer;
+}
+
+/* h1 centered at the top */
+.offer-section .top-center {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: var(--subheadfont);
+  margin: 0;
+
+}
+
+/* p at the top left */
+.offer-section .top-left {
+  position: absolute;
+  top: 42px;
+  left: 103px;
+  color: white;
+  margin: 0;
+  font-size: var(--subheadfont);
+ 
+}
+.offer-section ul{
+    position: absolute;
+    top: 80px;
+    left: 13px;
+    padding: 10px;
+    text-align: left;
+}
 
 
 
@@ -345,6 +390,9 @@ font-size: 14px;
 .footer-logo {
   flex: 1 1 200px;
   margin-bottom: 20px;
+}
+.footer-logo img{
+  width: 130px;
 }
 
 .footer-logo h3 {
@@ -885,9 +933,9 @@ background-color: #d07c5d;
 }
 
 .findgreat-work-content {
-  display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 64px;
+  display: flex;
+  justify-content:space-evenly ;
+  flex-wrap: wrap;
 }
 
 .findgreat-industries {
@@ -1003,9 +1051,7 @@ width: 120px;
        gap: 80px;
   }
   
-  .findgreat-industries-carousel {
-    justify-self: flex-start;
-  }
+  
 
   .findgreat-image-container {
   justify-self: center;
@@ -1017,14 +1063,19 @@ width: 110px;
 }
   
 }
-@media screen and (max-width:875px) {
+@media screen and (max-width:1057px) {
   .findgreat-work-content {
-       grid-template-columns: 1fr;
+       justify-content: center;
   }
   .findgreat-industry-card {
-    width: clamp(220px, 80%, 900px);;
+   width: 220px;
 
+  }
+  .findgreat-industries-carousel {
+    width: 259px;
   }
 
 
 }
+
+

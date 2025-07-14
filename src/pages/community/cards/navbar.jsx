@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import logo from "../../../images/logo.png"
+import logo from "../../../images/logo1.png"
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { RiEqualizerLine } from "react-icons/ri";
 import { CiSettings } from "react-icons/ci";
@@ -73,7 +73,7 @@ const CommunityNavbar = ({ isLoggedIn, setIsLoggedIn }) => {
         </li>
 
         
-        <li onClick={() => setMenuOpen(false)}>Academy</li>
+        <li onClick={() => { navigate("/Academy");setMenuOpen(false)}}>Academy</li>
         <li onClick={() => { navigate("/Community");setMenuOpen(false)}}>Community</li>
 
         

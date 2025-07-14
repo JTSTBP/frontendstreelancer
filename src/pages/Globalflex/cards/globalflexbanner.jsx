@@ -18,9 +18,9 @@ const GlobalFlexNetwork = () => {
         
         <div className="text-overlay">
          
-          <h1>Hire Smarter. Scale Faster. Work Remote.</h1>
+          <h1>Hire Remote. Stay Focused. Scale Smarter.</h1>
           <p>
-           Build your business with pre-trained, reliable remote professionals — fully managed by Streelancer. Trusted by startups and SMEs to scale ops 30–40% cheaper, with no quality compromise.
+          Streelancer helps you fill remote roles with pre-trained, verified talent — flexible, cost-efficient, and fully managed for your business needs.
 
           </p>
         </div>

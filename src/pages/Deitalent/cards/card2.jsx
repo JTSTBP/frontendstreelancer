@@ -1,11 +1,11 @@
 
 
 
-import React from 'react';
+import React,  { useEffect, useRef } from 'react';
 
 import arrowCircle from '../../../images/arrow.png';
 
-const Deifeatures = ({ onTakeSurveyClick }) => {
+const Deifeatures = ({ onTakeSurveyClick,onBookConsultClick }) => {
   return (
     <div className="flex-features-container">
       <div className="left-section">
@@ -24,7 +24,7 @@ const Deifeatures = ({ onTakeSurveyClick }) => {
             <button className="take-survey-btn" onClick={onTakeSurveyClick}>
              view Hiring modes 
             </button>
-            <button className="book-session-btn">Book free consultation</button>
+            <button className="book-session-btn" onClick={onBookConsultClick}>Book free consultation</button>
           </div>
 
          

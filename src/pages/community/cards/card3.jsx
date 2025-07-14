@@ -13,7 +13,7 @@ const NewsletterSection = () => {
         community stories — right in your inbox.
       </p>
       
-      <button className="newsletter-btn">Subscribe Now</button>
+    
     </div>
   );
 };

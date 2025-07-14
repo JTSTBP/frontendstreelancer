@@ -28,7 +28,7 @@ const TwoOptionsSection = () => {
         <div className="TwoOptionsSection-icon-section">
               <img className="twooption-img2" src={icon2}/>
         </div>
-        <button className="cta-button">Register Now</button>
+        <button className="cta-button" onClick={() => navigate('/Registration')}>Register Now</button>
       </div>
     </div>
   );
