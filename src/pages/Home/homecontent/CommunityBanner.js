@@ -38,8 +38,8 @@ function CommunityBanner() {
             <h4>Platform</h4>
             <ul>
               <li>Academy</li>
-              <li>Marketplace</li>
-              <li>CXO On Demand</li>
+              {/* <li>Marketplace</li>
+              <li>CXO On Demand</li> */}
               <li>Community</li>
               <li>DEI Benchmark</li>
             </ul>
