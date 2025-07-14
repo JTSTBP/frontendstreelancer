@@ -16,7 +16,7 @@ const errorRef = useRef(null);
      phone: '',
     email: '',
     regions: [],
-     industries: "", 
+     industry: "", 
     workModel: 'Full time remote',
     country: 'Your country',
     teamSize: 15,
@@ -81,6 +81,8 @@ const errorRef = useRef(null);
           country: 'Your country',
           teamSize: 15,
           requirements: '',
+           industry: "", 
+              phone: '',
         });
       } else {
        

@@ -13,7 +13,8 @@ const signupSchema = Joi.object({
 const contactSchema = Joi.object({
   company: Joi.string().min(2).max(100).required().label("Company Name"),
   name: Joi.string().min(2).max(50).required().label("Your Name"),
-  
+  industry: Joi.string().allow("").max(100).label("Industry"),
+
 phone: Joi.string()
     .pattern(/^[0-9]{10}$/)
     .required()
@@ -97,10 +98,15 @@ const info1Schema = Joi.object({
 });
 
  const personalSchema = Joi.object({
-  firstName: Joi.string().required().label("First name"),
+  firstName: Joi.string().min(2).max(30).required().label("First Name"),
+  lastName: Joi.string().allow("").max(30).label("Last Name"),
   email: Joi.string().email({ tlds: { allow: false } }).required().label("Email"),
   phone: Joi.string().pattern(/^[0-9]{10}$/).required().label("Phone"),
-  gender: Joi.string().required().label("Gender")
+  gender: Joi.string().valid("female", "other").required().label("Gender"),
+  country: Joi.string().required().label("Country"),
+  city: Joi.string().allow("").label("City"),
+  careerBreak: Joi.boolean().label("Career Break"),
+  deiIdentities: Joi.array().items(Joi.string()).label("DEI Identities")
 });
 
 module.exports = {

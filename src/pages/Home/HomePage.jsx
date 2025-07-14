@@ -35,7 +35,7 @@ const HomePage = () => {
             </p>
             <div className="hero-buttons">
               <button className="btn-primary standard-btn" onClick={()=>{ navigate("/DEITalenthire")}}>Hire Now</button>
-              <button className="btn-primary btn-outline standard-btn" onClick={()=>{ navigate("/Registration")}}>Register Now</button>
+              <button className="btn-primary btn-outline standard-btn" onClick={()=>{ navigate("/Signup")}}>Register Now</button>
             </div>
             <ul className="features">
               <li>
