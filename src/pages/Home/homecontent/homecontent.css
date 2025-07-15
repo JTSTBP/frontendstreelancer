@@ -19,17 +19,17 @@
 
 
 .bluecard{
-background-color: var(--primarycolor);
+
 border-bottom-right-radius: 30px;
 
 ul{color: #D3B5FF;}}
 .orgcard{
-background-color: var(--secondarycolor);
+
 border-top-left-radius: 30px; ul{
   color: #FF9B6F;
 }}
 .pinkcard{
-  background-color: #F3857E;
+
   ul{
     color: #8D3A35;
   }
@@ -194,7 +194,7 @@ bottom:4px;
 }
 .offer-section ul{
     position: absolute;
-    top: 80px;
+    top: 100px;
     left: 13px;
     padding: 10px;
     text-align: left;
