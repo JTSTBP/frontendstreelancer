@@ -4,6 +4,11 @@ import { FaGoogle, FaFacebook, FaLinkedin } from "react-icons/fa";
 import "./auth.css";
 import { useNavigate } from "react-router-dom";
 import Backendurl from "../../config"; 
+import { GoogleLogin } from '@react-oauth/google';
+
+import { useGoogleLogin } from '@react-oauth/google';
+import { jwtDecode } from 'jwt-decode';
+
 
 const Login = () => {
   const navigate = useNavigate();
@@ -59,6 +64,78 @@ setMessageType("");
     }
   };
 
+
+
+// google login
+const googleLogin = useGoogleLogin({
+  onSuccess: async (tokenResponse) => {
+    try {
+      const response = await fetch(`${Backendurl}/api/google-login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ access_token: tokenResponse.access_token }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+         setMessageType("Success");
+        setMessage(data.message || "Google login Success.");
+        localStorage.setItem("token", data.token);
+        navigate(data.isNewUser ? "/Registration" : "/");
+      } else {
+        setMessageType("error");
+        setMessage(data.message || "Google login failed.");
+      }
+    } catch (err) {
+      setMessageType("error");
+      setMessage("Google login error.");
+    }
+  },
+  onError: () => {
+    setMessageType("error");
+    setMessage("Google login failed.");
+  }
+});
+
+// facebook login
+const facebookLogin = () => {
+  window.FB.login(async (response) => {
+    if (response.authResponse) {
+      const accessToken = response.authResponse.accessToken;
+
+      try {
+        const res = await fetch(`${Backendurl}/api/facebook-login`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ access_token: accessToken }),
+        });
+
+        const data = await res.json();
+
+        if (res.ok) {
+          setMessageType("Success");
+          setMessage(data.message || "Facebook login successful");
+          localStorage.setItem("token", data.token);
+          navigate(data.isNewUser ? "/Registration" : "/");
+        } else {
+          setMessageType("error");
+          setMessage(data.message || "Facebook login failed");
+        }
+      } catch (err) {
+        setMessageType("error");
+        setMessage("Facebook login error");
+      }
+    } else {
+      setMessageType("error");
+      setMessage("Facebook login cancelled or failed");
+    }
+  }, { scope: "email" });
+};
+
+
   return (
     <div className="login-container">
       <div className="login-box">
@@ -103,9 +180,12 @@ setMessageType("");
           <div className="divider">or</div>
 
           <div className="auth-social-icons">
-            <FaGoogle />
-            <FaFacebook />
-            <FaLinkedin />
+        <FaGoogle onClick={googleLogin} style={{ cursor: "pointer", fontSize: "24px" }} />
+
+{/* <FaFacebook onClick={facebookLogin} style={{ cursor: "pointer", fontSize: "24px" }} />
+<FaLinkedin onClick={linkedinLogin} style={{ cursor: "pointer", fontSize: "24px" }} /> */}
+
+         
           </div>
 
           <p className="signin-text">

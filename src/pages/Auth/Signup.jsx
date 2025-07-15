@@ -9,7 +9,7 @@ import slide3 from "../../images/signup3.png";
 import "./auth.css";
 import Backendurl from "../../config"; 
 import { signupSchema } from "../../validations/validationSchema";
-
+import { useGoogleLogin } from '@react-oauth/google';
 
 
 const images = [slide1, slide2, slide3];
@@ -96,6 +96,39 @@ setMessageType("");
   console.log(messageType,"messagetype");
   
 
+// google login
+const googleLogin = useGoogleLogin({
+  onSuccess: async (tokenResponse) => {
+    try {
+      const response = await fetch(`${Backendurl}/api/google-login`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ access_token: tokenResponse.access_token }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+         setMessageType("Success");
+        setMessage(data.message || "Google login Success.");
+        localStorage.setItem("token", data.token);
+        navigate(data.isNewUser ? "/Registration" : "/");
+      } else {
+        setMessageType("error");
+        setMessage(data.message || "Google login failed.");
+      }
+    } catch (err) {
+      setMessageType("error");
+      setMessage("Google login error.");
+    }
+  },
+  onError: () => {
+    setMessageType("error");
+    setMessage("Google login failed.");
+  }
+});
   return (
     <div className="signup-container">
       <div className="signup-wrapper">
@@ -148,9 +181,10 @@ setMessageType("");
           <div className="divider">or</div>
 
           <div className="auth-social-icons">
-            <FaGoogle />
+           <FaGoogle onClick={googleLogin} style={{ cursor: "pointer", fontSize: "24px" }} />
+{/*          
             <FaFacebook />
-            <FaLinkedin />
+            <FaLinkedin /> */}
           </div>
 
           <p className="signin-text">

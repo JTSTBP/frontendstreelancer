@@ -151,21 +151,21 @@ const errorRef = useRef(null);
             <Mail size={16} />
             <div>
               <p className="consultation-info-title">Email Us</p>
-              <p>hire@streelancer.in</p>
+              <p>hire@streelancer.com</p>
             </div>
           </div>
-          <div className="consultation-info-box">
+          {/* <div className="consultation-info-box">
             <Phone size={16} />
             <div>
               <p className="consultation-info-title">Call Us</p>
               <p>+91 98765 43210</p>
             </div>
-          </div>
+          </div> */}
           <div className="consultation-info-box">
             <MapPin size={16} />
             <div>
               <p className="consultation-info-title">Office Location</p>
-              <p>Koramangala, Bangalore 560034</p>
+              <p>Bangalore 560034</p>
             </div>
           </div>
         </div>
