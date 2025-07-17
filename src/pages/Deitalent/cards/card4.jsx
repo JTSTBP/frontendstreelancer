@@ -11,8 +11,8 @@ import ShoppingBag from "../../../images/ser7.png"
 
 const industries = [
   {
-    title: "BFSI",
-    description: "KYC operations, customer support, documentation processing",
+    title: "Manufacturing & EMS ",
+    description: "Roles: Documentation, backend coordination, customer support.",
     icon: Bank 
   },
   {
@@ -21,28 +21,23 @@ const industries = [
     icon: ShoppingCart 
   },
   {
-    title: "Healthcare",
-    description: "Patient coordination, appointment scheduling, CX support",
+    title: "Healthcare & Pharmaceuticals",
+    description: "Roles: Teleconsultation support, claims processing, regulatory documentation.",
     icon: HeartPulse
   },
   {
-    title: "Logistics",
-    description: "Order tracking, dispatch coordination, customer updates",
+    title: "Logistics, Infrastructure & Construction",
+    description: "Ticket desk, route support, virtual admins  Daily ops support with zero infra burden",
     icon: Truck
   },
   {
-    title: "Technology",
-    description: "Technical support, documentation, QA testing",
+    title: "Startups, SaaS & Tech",
+    description: "Roles: Content moderation, lead generation, CRM hygiene, email/chat support.",
     icon: Laptop
   },
   {
-    title: "EdTech",
-    description: "Student engagement, course management, content support",
-    icon: GraduationCap
-  },
-  {
-    title: "Retail",
-    description: "Catalog management, chat operations, order processing",
+    title: "Manufacturing & EMS",
+    description: "Roles: Documentation, backend coordination, customer support.",
     icon: ShoppingBag
   }
 ];
