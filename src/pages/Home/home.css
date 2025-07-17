@@ -65,7 +65,7 @@ font-family: 'Roboto', sans-serif;
 .nav-links li {
   cursor: pointer;
   font-weight: 500;
-  font-size: var(--smallparafont);
+  font-size: var(--parafont);
   color: var(--textcolor);
 }
 .nav-links li:hover{
@@ -304,7 +304,7 @@ color: #FFE8E8;
 /* ===== RESPONSIVE ===== */
 
 /* navbar and hero section */
-@media (max-width: 950px) {
+@media (max-width: 1080px) {
   .navbar{
     padding:2rem 1rem ;
   }

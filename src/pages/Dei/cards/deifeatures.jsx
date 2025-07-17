@@ -47,7 +47,7 @@ const Deifeatures =forwardRef( ({ onTakeSurveyClick },ref)=> {
           <div className="dei-steps">
             <div className="step">
               <div className="circle"><div>1</div></div>
-              <p>Aware</p>
+              <p>Impact</p>
             </div>
             <div className="step">
               <div className="circle"><div>2</div></div>
@@ -55,7 +55,7 @@ const Deifeatures =forwardRef( ({ onTakeSurveyClick },ref)=> {
             </div>
             <div className="step">
               <div className="circle"><div>3</div></div>
-              <p>Impact</p>
+              <p>Aware</p>
             </div>
           </div>
         </div>

@@ -19,9 +19,7 @@ import FoundersMistakes from "./pages/Services/communityfounder";
 import ComingSoon from "./pages/Academy/academypage";
 import Skills from "./pages/Services/skills";
 import Talent from "./pages/Services/talent";
-
-
-
+import LinkedInSuccess from "./pages/Auth/linkdinsuccess";
 
 
 
@@ -49,7 +47,9 @@ export default function App() {
               <Route path="/Community/foundermistake" element={<FoundersMistakes />} />
                <Route path="/Community/Skills" element={<Skills />} />
                 <Route path="/Community/Talent" element={<Talent />} />
-               
+
+ <Route path="/linkedin-success" element={<LinkedInSuccess />} />
+             
       </Routes>
     </Router>
        <ToastContainer position="top-right" autoClose={3000} /></>

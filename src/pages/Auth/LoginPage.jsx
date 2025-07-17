@@ -3,11 +3,16 @@ import React, { useState } from "react";
 import { FaGoogle, FaFacebook, FaLinkedin } from "react-icons/fa";
 import "./auth.css";
 import { useNavigate } from "react-router-dom";
-import Backendurl from "../../config"; 
+import Backendurl, {LINKEDIN_REDIRECT_URI} from "../../config"; 
+import { LinkedIn } from 'react-linkedin-login-oauth2'; // or whichever package you're using
+
+
 import { GoogleLogin } from '@react-oauth/google';
+
 
 import { useGoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from 'jwt-decode';
+
 
 
 const Login = () => {
@@ -16,7 +21,7 @@ const Login = () => {
   const [message, setMessage] = useState("");
   const [messageType, setMessageType] = useState(""); // 'success' | 'error'
 
-console.log(Backendurl,"Backendurl" , process.env.NODE_ENV)
+console.log(Backendurl,"Backendurl" , process.env.NODE_ENV,LINKEDIN_REDIRECT_URI)
   // Handle input changes
   const handleChange = (e) => {
     
@@ -135,6 +140,20 @@ const facebookLogin = () => {
   }, { scope: "email" });
 };
 
+// linkdin login
+
+
+const linkdinlogin=()=>{
+  const params=new URLSearchParams({
+    response_type:"code",
+    client_id:process.env.REACT_APP_LINKEDIN_CLIENT_ID,
+    redirect_uri: "http://localhost:5000/api/linkedin/callback",
+    scope: "openid email profile w_member_social"
+
+  })
+  window.location.href=`https://www.linkedin.com/oauth/v2/authorization?${params}`
+}
+
 
   return (
     <div className="login-container">
@@ -181,11 +200,9 @@ const facebookLogin = () => {
 
           <div className="auth-social-icons">
         <FaGoogle onClick={googleLogin} style={{ cursor: "pointer", fontSize: "24px" }} />
+<FaLinkedin onClick={linkdinlogin} style={{ cursor: "pointer", fontSize: "24px" }}/>
 
-{/* <FaFacebook onClick={facebookLogin} style={{ cursor: "pointer", fontSize: "24px" }} />
-<FaLinkedin onClick={linkedinLogin} style={{ cursor: "pointer", fontSize: "24px" }} /> */}
-
-         
+   
           </div>
 
           <p className="signin-text">
