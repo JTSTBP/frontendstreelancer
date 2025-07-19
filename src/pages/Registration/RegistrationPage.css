@@ -248,3 +248,7 @@ background-color: #FFF0E8;
 .close-btn:hover {
   background-color: #db2777;
 }
+
+.backend-error-message{
+  color: red;
+}

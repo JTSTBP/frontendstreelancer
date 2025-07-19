@@ -377,7 +377,7 @@ color: #FFE8E8;
     padding:0px 1rem;
     flex-direction: column-reverse;
   }
-  .navbar {padding: 2rem 1rem;}
+  .navbar {padding: 0px;}
 }
 @media (max-width: 890px) {
   

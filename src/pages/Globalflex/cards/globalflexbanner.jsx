@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react'; // Optional: Use any icon library or SVG
 
-import topWave from '../../../images/global.png';
+import topWave from '../../../images/sambg1.png';
 
 const GlobalFlexNetwork = () => {
   const navigate = useNavigate();

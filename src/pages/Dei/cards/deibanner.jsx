@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import topWave from '../../../images/dei.png';
+import topWave from '../../../images/sambg2.png';
 import { ArrowLeft } from 'lucide-react';
 
 
