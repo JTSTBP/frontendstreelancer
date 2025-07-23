@@ -31,10 +31,11 @@ const HomePage = () => {
             <h1>Hire Smarter. Hire Women.
 </h1>
             <p>
-              Fully managed, inclusive women talent — curated, verified, and delivered in just 72 hours.
+            Remote, Hybrid & Fractional. Vetted. Managed. Ready in 72 hours.
+
             </p>
             <div className="hero-buttons">
-              <button className="btn-primary standard-btn" onClick={()=>{ navigate("/DEITalenthire")}}>Hire Now</button>
+              <button className="btn-primary standard-btn" onClick={()=>{ navigate("/DEITalenthire")}}>Hire Talent </button>
               <button className="btn-primary btn-outline standard-btn" onClick={()=>{ navigate("/Signup")}}>Register Now</button>
             </div>
             <ul className="features">
@@ -42,18 +43,18 @@ const HomePage = () => {
                 <span>
                   <img src={require("../../images/done.png")} />
                 </span>
-                DEI-aligned, work-from-home talent
+               Fully managed — no HR hassle
               </li>
               <li>
                 <span>
                   <img src={require("../../images/done.png")} />
                 </span>
-                Vetted profiles, ready to get hired
+                Remote, Hybrid & Fractional models
 
               </li>
               <li>
                 <img src={require("../../images/done.png")} />
-                Career returnee support through courses & mentorship
+               DEI-aligned, vetted professionals
 
               </li>
             </ul>

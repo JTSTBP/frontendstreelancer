@@ -101,7 +101,11 @@ const info1Schema = Joi.object({
   firstName: Joi.string().min(2).max(30).required().label("First Name"),
   lastName: Joi.string().allow("").max(30).label("Last Name"),
   email: Joi.string().email({ tlds: { allow: false } }).required().label("Email"),
-  phone: Joi.string().pattern(/^[0-9]{10}$/).required().label("Phone"),
+  phone: Joi.string().pattern(/^[0-9]{10}$/).required().label("Phone").messages({
+    "string.pattern.base": `"Phone" must be a valid 10-digit number without country code or spaces`,
+    "string.empty": `"Phone" cannot be empty`,
+    "any.required": `"Phone" is required`
+  }),
   gender: Joi.string().valid("female", "other").required().label("Gender"),
   country: Joi.string().required().label("Country"),
   city: Joi.string().allow("").label("City"),

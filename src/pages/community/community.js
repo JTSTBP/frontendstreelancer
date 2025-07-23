@@ -17,8 +17,9 @@ function Community() {
  <CommunityNavbar/>
  <CommunitySection/>
  <CommunityBlog/>
+ <TestimonialCarousel/>
 <PartnersCarousel/>
-<TestimonialCarousel/>
+
 
       <TwoOptionsSection/>
         <NewsletterSection/>

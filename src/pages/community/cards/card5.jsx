@@ -15,18 +15,16 @@ const CommunitySection = () => {
       <div className="communitysection-badge">+100 community of active people</div>
 
       <h1 className="communitysection-title">
-        Be Part of a Purpose-Driven Community <br />
-        <span>Redefining the Future of Work</span>
+      Connect. Learn. Earn. Together.
       </h1>
 
       <p className="communitysection-description">
-        Connect with changemakers, explore stories, share resources, and grow
-        with a network built for inclusive, second-career, and diverse talent.
-      </p>
+       Join our free network — mentorship, forums and paid microprojects.  </p>
 
       <div className="communitysection-cta-buttons">
-        <button className="communitysection-btn primary">Join as an Organization</button>
-        <button className="communitysection-btn outline">Join as an Individual</button>
+        <button className="communitysection-btn primary">Join the Community
+</button>
+        <button className="communitysection-btn outline">Ask a Mentor</button>
       </div>
          <img src={lines23497} alt="Lines" className="lines-image23497" />
      
@@ -36,15 +34,15 @@ const CommunitySection = () => {
       <div className="communitysection-info-cards">
         <div className="communitysection-card">
           <img src={comm1} alt="Upcoming Events" />
-          <div className="communitysection-card-label">Upcoming Events</div>
+          <div className="communitysection-card-label">Peer Support Forums</div>
         </div>
         <div className="communitysection-card">
           <img src={comm2} alt="New Courses" />
-          <div className="communitysection-card-label">New Courses & Upskilling</div>
+          <div className="communitysection-card-label">Monthly DEI Events & AMAs</div>
         </div>
         <div className="communitysection-card">
           <img src={comm3} alt="Community Announcements" />
-          <div className="communitysection-card-label">Community Announcements</div>
+          <div className="communitysection-card-label">CXO Mentorship</div>
         </div>
       </div>
     </section>

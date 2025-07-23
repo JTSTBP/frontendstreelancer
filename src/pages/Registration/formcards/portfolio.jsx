@@ -16,10 +16,27 @@ export default function PortfolioWorkSamples({ formData, setFormData }) {
     }));
   };
 
-  const handleResumeUpload = (e) => {
-    const file = e.target.files[0];
-    handleChange("resume", file);
+ const handleResumeUpload = (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onloadend = () => {
+    setFormData((prev) => ({
+      ...prev,
+      portfolio: {
+        ...prev.portfolio,
+        resume: {
+          fileName: file.name,
+          fileType: file.type,
+          fileData: reader.result.split(",")[1], // Base64 only
+        },
+      },
+    }));
   };
+  reader.readAsDataURL(file);
+};
+
 
   return (
     <div className="portfolio-container">

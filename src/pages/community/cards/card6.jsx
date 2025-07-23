@@ -36,7 +36,7 @@ const CommunityBlog = () => {
     const navigate=useNavigate()
   return (
     <section className="communityblog">
-      <h2>From the Community Blog</h2>
+      <h2>Paid Microprojects</h2>
       <p className="communityblog-subtext">
         Insights, journeys, and ideas — written by and for the Streelancer
         network.

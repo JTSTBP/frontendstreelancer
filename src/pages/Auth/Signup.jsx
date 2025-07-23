@@ -7,7 +7,7 @@ import slide1 from "../../images/signup1.png";
 import slide2 from "../../images/signup2.png";
 import slide3 from "../../images/signup3.png";
 import "./auth.css";
-import Backendurl from "../../config"; 
+import Backendurl, {LINKEDIN_REDIRECT_URI} from "../../config"; 
 import { signupSchema } from "../../validations/validationSchema";
 import { useGoogleLogin } from '@react-oauth/google';
 
@@ -129,6 +129,20 @@ const googleLogin = useGoogleLogin({
     setMessage("Google login failed.");
   }
 });
+
+// linkdin
+
+const linkdinlogin=()=>{
+  const params=new URLSearchParams({
+    response_type:"code",
+    client_id:process.env.REACT_APP_LINKEDIN_CLIENT_ID,
+    redirect_uri: LINKEDIN_REDIRECT_URI,
+    scope: "openid email profile"
+
+  })
+  window.location.href=`https://www.linkedin.com/oauth/v2/authorization?${params}`
+}
+
   return (
     <div className="signup-container">
       <div className="signup-wrapper">
@@ -182,6 +196,7 @@ const googleLogin = useGoogleLogin({
 
           <div className="auth-social-icons">
            <FaGoogle onClick={googleLogin} style={{ cursor: "pointer", fontSize: "24px" }} />
+           <FaLinkedin onClick={linkdinlogin} style={{ cursor: "pointer", fontSize: "24px" }}/>
 {/*          
             <FaFacebook />
             <FaLinkedin /> */}

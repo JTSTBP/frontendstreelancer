@@ -81,7 +81,7 @@ const allErrors = error.details[0].message;
     }
   };
 
-
+console.log(formData)
 const handleSubmit = async () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 

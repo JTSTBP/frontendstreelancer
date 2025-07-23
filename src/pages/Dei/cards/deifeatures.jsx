@@ -30,10 +30,10 @@ const Deifeatures =forwardRef( ({ onTakeSurveyClick },ref)=> {
         <div className="dei-container">
           <div className="dei-buttons">
             <button className="take-survey-btn" onClick={onTakeSurveyClick}>
-              Take Survey
+              Take Survey Now
             </button>
       <button className="book-session-btn" onClick={handleBookSession}>
-              Book DEI Session
+              Book a DEI Session
             </button>
           </div>
 

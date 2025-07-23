@@ -9,8 +9,7 @@ const NewsletterSection = () => {
       <h2 className="newsletter-heading">Stay in the Loop with Streelancer</h2>
       
       <p className="newsletter-description">
-        Get updates on new job roles, training programs, DEI hiring tips, and inspiring
-        community stories — right in your inbox.
+      Get updates on jobs, training programs, DEI tips, and inspiring community stories — straight to your inbox.
       </p>
       
     

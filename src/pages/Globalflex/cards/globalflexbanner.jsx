@@ -18,10 +18,9 @@ const GlobalFlexNetwork = () => {
         
         <div className="text-overlay">
          
-          <h1>Hire Remote. Stay Focused. Scale Smarter.</h1>
+          <h1>Hire DEI-Aligned Women Talent — Managed & Ready.</h1>
           <p>
-          Streelancer helps you fill remote roles with pre-trained, verified talent — flexible, cost-efficient, and fully managed for your business needs.
-
+         Vetted, flexible, fully managed teams delivered in 72 hours.
           </p>
         </div>
       </div>

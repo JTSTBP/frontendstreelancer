@@ -19,10 +19,8 @@ const Deibanner = () => {
         
         <div className="text-overlay">
           
-          <h1>How Inclusive Is Your Workplace?<br/> Take the DEI Score Test</h1>
-          <p>
-          Measure, benchmark, and improve your organization's Diversity, Equity, and Inclusion metrics with our comprehensive assessment tool.
-          </p>
+          <h1>Check Your Workplace Inclusion. Get Your DEI Score.</h1>
+          <p>5-minute survey. Benchmark your DEI. Earn a badge.</p>
         </div>
       </div>
    </div>

@@ -8,7 +8,7 @@ const GlobalFlexFeatures = () => {
     <div className="flex-features-container">
       <div className="left-section">
         <img src={arrowCircle} alt="Big Circle" className="big-circle" />
-        <h2>Why Streelancer Remote Talent?</h2>
+        <h2>Why Hire With Us</h2>
         <p>
         Build your team in just 72 hours and save up to 40% without compromising quality.
         </p>
@@ -24,29 +24,25 @@ const GlobalFlexFeatures = () => {
   <div className="feature-item">
     <h3>1. Managed Service</h3>
     <p>
-      We hire, onboard, and oversee your team so you can<br />
-      focus on your core business.
+      We hire, onboard, and manage your team for you.
     </p>
   </div>
   <div className="feature-item">
     <h3>2. Flexible Hiring</h3>
     <p>
-      Full-time, project-based, or consulting —<br />
-      choose what fits your needs.
+    Full-time, project-based, or consulting — you choose.
     </p>
   </div>
   <div className="feature-item">
     <h3>3. Cost Savings</h3>
     <p>
-      Save up to 40% compared to in-house teams<br />
-      without compromising on quality.
+     Save up to 40% vs in-house.
     </p>
   </div>
   <div className="feature-item">
     <h3>4. Quick Start</h3>
     <p>
-      Deploy trained talent within 72 hours and<br />
-      accelerate your growth.
+      Deploy trained talent within 72 hours.
     </p>
   </div>
 </div>
