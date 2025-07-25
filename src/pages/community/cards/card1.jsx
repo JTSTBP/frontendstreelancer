@@ -3,12 +3,48 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 
 
 const faqs = [
-  { question: "Who can join Streelancer?", answer: "Anyone who identifies as a woman, queer, person with disability, neurodiverse, returnee, or part of the silver generation is welcome!" },
-  { question: "Do I need prior work experience to apply?", answer: "Not necessarily. We have opportunities for freshers, returnees, and experienced professionals — plus training to help you get job-ready." },
-  { question: "How does the hiring process work?", answer: "Once you register and complete your profile, we’ll match you to job roles or training based on your skills and availability." },
-  { question: "Are all roles remote?", answer: "We offer remote, hybrid, project-based, and fractional roles — based on what suits your schedule and goals best." },
-  { question: "I’m an employer. How do I start hiring?", answer: "Just visit our \[Hire Talent] page or \[Book a Consultation]. We’ll guide you through your DEI-aligned hiring journey." }
-];
+  {
+    question: "What is the Streelancer Community?",
+    answer: "It’s a free network for women, queer talent, persons with disabilities, and second-career professionals to connect, learn, and earn through mentorship, forums, and paid microprojects."
+  },
+  {
+    question: "Who can join the Streelancer Community?",
+    answer: "Anyone who identifies as a woman, queer, person with disability, neurodiverse, returnee, or part of the silver generation can join."
+  },
+  {
+    question: "Is there any cost to join the community?",
+    answer: "No, joining the Streelancer Community is completely free."
+  },
+  {
+    question: "What benefits do I get as a member?",
+    answer: "Access to mentorship, peer support forums, exclusive events, paid microprojects, career resources, and networking with inclusive employers."
+  },
+  {
+    question: "Do I need work experience to join?",
+    answer: "No, the community is open to both beginners and experienced professionals."
+  },
+  {
+    question: "Can I find jobs through the community?",
+    answer: "Yes, you can explore paid microprojects, freelance roles, and remote job opportunities shared exclusively with community members."
+  },
+  {
+    question: "What kind of events are conducted?",
+    answer: "Monthly DEI events, AMA sessions with CXOs, mentorship programs, skill-building workshops, and networking meetups."
+  },
+  // {
+  //   question: "How do I access mentorship?",
+  //   answer: "You can use the 'Ask a Mentor' feature after joining the community to connect with experienced professionals."
+  // },
+  // {
+  //   question: "Is the community safe and inclusive?",
+  //   answer: "Yes, Streelancer ensures a safe, inclusive, and supportive environment for all members."
+  // },
+  // {
+  //   question: "How do I register for the community?",
+  //   answer: "Simply click on 'Join the Community' on the Streelancer website and complete a quick registration form."
+  // }
+]
+
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState(null);

@@ -10,7 +10,7 @@
   --lightpurcolor:#5C0090;
 
   --heading: clamp(0.6rem, 3vw, 5rem);
-  --mainparafont:clamp(3px, 1.2vw, 1.3rem);
+  --mainparafont:clamp(3px, 1.8vw, 1.4rem);
   --mainheadfont: clamp(1.2rem, 2.5vw, 2.5rem);
   --subheadfont: clamp(0.9rem, 2vw, 1.3rem);
   --parafont: clamp(0.85rem, 1.8vw, 1.1rem);
@@ -210,7 +210,7 @@ color: #FFE8E8;
 }
 
 .hero-text p {
-  font-size: var(--subheadfont);
+  font-size: var(--parafont);
   margin-bottom: 25px;
 }
 
@@ -306,7 +306,7 @@ color: #FFE8E8;
 /* navbar and hero section */
 @media (max-width: 1080px) {
   .navbar{
-    padding:2rem 1rem ;
+    padding:0.5rem 1rem ;
   }
 }
 @media  (min-width:600px) and (max-width:910px)  {

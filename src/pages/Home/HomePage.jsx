@@ -9,6 +9,7 @@ import StreelancerSteps from "./homecontent/stepscontent";
 import { useLocation, useNavigate } from "react-router-dom";
 import Navbar from "./navbar";
 import FindGreatWork from "./homecontent/findgreatwork";
+import FAQSection from "./homecontent/faqs";
  // Adjust the path as needed
 
 const HomePage = () => {
@@ -70,6 +71,7 @@ const HomePage = () => {
  
       <ExperienceBoxes />
       <StreelancerSteps />
+      <FAQSection/>
       <CommunityBanner />
     </div>
   );

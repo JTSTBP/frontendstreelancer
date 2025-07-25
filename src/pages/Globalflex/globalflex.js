@@ -9,6 +9,7 @@ import ContactForm from "./cards/contactus";
 import { useLocation } from "react-router-dom";
 import Navbar from "../Home/navbar";
 import SampleNavbar from "../Home/OtherpagesNavbar";
+import FAQSection from "./cards/faqs";
 
 
 
@@ -33,6 +34,7 @@ const GlobalFlex = () => {
    <GlobalFlexFeatures/>
    <IndustrySolutions/>
    <HowItWorks/>
+   <FAQSection/>
    <div ref={contactRef}>
         <ContactForm />
       </div>

@@ -15,6 +15,7 @@ import StartDEIJourney from "./cards/deiend";
 import Mainpopup from "./popup/mainpopup";
 import SampleNavbar from "../Home/OtherpagesNavbar";
 import CongratulationsPopup from "./popup/congratulationspopup";
+import FAQSection from "./cards/faqs";
 
 
 
@@ -44,8 +45,9 @@ const Deimain = () => {
       <Deitrust />
       <DEICertification />
       <DEIBadges />
+         <FAQSection/>
       <StartDEIJourney scrollToFeatures={scrollToFeatures} onTakeSurveyClick={() => setShowSurveycongrats(true)} />
-
+  
       {showSurvey && <Mainpopup onClose={() => setShowSurvey(false)} />}
         {showSurveycongrats && <CongratulationsPopup onClose={()=> setShowSurveycongrats(false)}/>}
     </div>

@@ -11,6 +11,7 @@ import HiringCard from "./cards/card6";
 import IndustriesSection from "./cards/card4";
 import ContactForm from "./cards/card7";
 import SampleNavbar from "../Home/OtherpagesNavbar";
+import FAQSection from "./cards/faqs";
 
 
 const Deitalent = () => {
@@ -48,7 +49,7 @@ const scrollToContactForm = () => {
       <div ref={hiringRef}>
         <HiringCard />
       </div>
-   
+   <FAQSection/>
      <div ref={contactRef}>
   <ContactForm />
 </div>
