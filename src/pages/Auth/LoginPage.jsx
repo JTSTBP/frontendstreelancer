@@ -68,7 +68,7 @@ setMessageType("");
       
           navigate("/");  // Home page
         } else {
-          navigate("/register"); // Registration page
+          navigate("/Registration"); // Registration page
         }
       }, 2500);
     } else {
