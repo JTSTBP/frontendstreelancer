@@ -59,6 +59,25 @@ console.log(formData,"formData")
 // get user details
 useEffect(() => {
   const fetchUserDetails = async () => {
+
+    const storedData = localStorage.getItem("Usersignup");
+if (storedData) {
+  const parsedData = JSON.parse(storedData);
+
+  setFormData((prev) => ({
+    ...prev,
+    personal: {
+      ...prev.personal,
+      firstName: parsedData.fullName || "",
+      email: parsedData.email || "",
+      gender: parsedData.gender || "",
+      
+    },
+  }));
+}
+
+
+
     const token = localStorage.getItem("token");
     if (!token) return;
 
@@ -187,6 +206,7 @@ const handleUpdate = async () => {
     if (response.ok) {
     
         toast.success(data.message);
+        navigate("/")
     } else {
       setBackendError(data?.message || "Failed to update details.");
     }

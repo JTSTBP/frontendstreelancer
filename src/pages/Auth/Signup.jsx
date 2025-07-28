@@ -81,6 +81,9 @@ setMessageType("");
      const data = await response.json();
 
     if (response.ok) {
+       localStorage.setItem("token", data.token); 
+       localStorage.setItem("Usersignup",JSON.stringify(data.newUser))
+       
       setMessageType("Success");
       setMessage(data.message || "Signup successful! Redirecting...");
       setTimeout(() => navigate("/Registration"), 2500);
