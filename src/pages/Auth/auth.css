@@ -43,6 +43,32 @@
   color: #DAD6E0;
   font-size: var(--smallparafont);
 }
+.signup-form select {
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #B5ACC2;
+  background-color: transparent;
+  color: #DAD6E0 !important;
+  font-size: var(--smallparafont);
+  option{
+    color :black;
+  }
+}
+
+
+.input-row select,
+.input-row input {
+  flex: 1 1 50%; /* takes 50% when space is available */
+  min-width: 200px; /* optional: avoid too small size */
+}
+
+/* When wrapped (like on smaller screens), make full width */
+@media (max-width: 600px) {
+  .input-row select,
+  .input-row input {
+    flex: 1 1 100%;
+  }
+}
 
 .signup-form input::placeholder {
   color: #ccc;

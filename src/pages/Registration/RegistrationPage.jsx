@@ -1,7 +1,7 @@
 
 
 
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./RegistrationPage.css";
  // Add this line to import Popup styles
 import Personalcard from "./formcards/personalcard";
@@ -13,6 +13,8 @@ import AlmostDone from "./formcards/Almost";
 import { useNavigate } from "react-router-dom";
 import Backendurl from "../../config"; 
 import { personalSchema } from "../../validations/validationSchema";
+import { toast } from "react-toastify";
+
 
 const steps = [
   "Personal",
@@ -26,7 +28,7 @@ const steps = [
 function RegistrationPage() {
   const [validationError, setValidationError] = useState("");
   const [backendError, setBackendError] = useState("");
-
+  const [updatebtn,setUpdateBtn]=useState("")
 
   const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(0);
@@ -35,8 +37,64 @@ function RegistrationPage() {
   personal: {},
  professional: {},
   availability: {},
-  portfolio: {}
+  portfolio: {},
+almostDone: {      // <-- Add default structure
+    joinCommunity: false,
+    preferences: {
+      jobMatches: false,
+      training: false,
+      events: false,
+      news: false,
+    },
+    agreeTerms: false,
+  },
+  preferences: {
+    workTracks: [],
+    experience: ""
+  }
+
 });
+console.log(formData,"formData")
+
+// get user details
+useEffect(() => {
+  const fetchUserDetails = async () => {
+    const token = localStorage.getItem("token");
+    if (!token) return;
+
+    try {
+      const response = await fetch(`${Backendurl}/api/UserDetails`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        console.log("Fetched user details:", data);
+  setUpdateBtn(true)
+        // Update form data with backend values
+        setFormData((prev) => ({
+          ...prev,
+          personal: data.personal || {},
+          professional: data.professional || {},
+          availability: data.availability || {},
+          portfolio: data.portfolio || {},
+          almostDone: data.almostDone || prev.almostDone,
+          preferences:data.preferences || prev.preferences
+        }));
+      } else {
+        console.error("Failed to fetch user details");
+      }
+    } catch (error) {
+      console.error("Error fetching user details:", error);
+    }
+  };
+
+  fetchUserDetails();
+}, []);
 
 const validateStep = () => {
   if (currentStep === 0) {
@@ -73,7 +131,7 @@ const allErrors = error.details[0].message;
 };
 
 
-  const handleBack = () => {
+const handleBack = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
     if (currentStep > 0) {
@@ -81,8 +139,8 @@ const allErrors = error.details[0].message;
     }
   };
 
-console.log(formData)
 const handleSubmit = async () => {
+    setBackendError("");
   window.scrollTo({ top: 0, behavior: "smooth" });
 
   try {
@@ -111,8 +169,35 @@ const handleSubmit = async () => {
   }
 };
 
+const handleUpdate = async () => {
+  setBackendError("");
+  window.scrollTo({ top: 0, behavior: "smooth" });
 
-  const handleClose=()=>{
+  try {
+    const token = localStorage.getItem("token");
+    const response = await fetch(`${Backendurl}/api/updateUserDetails`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+    const data = await response.json();
+
+    if (response.ok) {
+    
+        toast.success(data.message);
+    } else {
+      setBackendError(data?.message || "Failed to update details.");
+    }
+  } catch (error) {
+    console.error("Error updating details:", error);
+    setBackendError("An error occurred while updating. Please try again.");
+  }
+};
+
+
+const handleClose=()=>{
 setShowPopup(false)
 navigate("/")
   }
@@ -179,17 +264,23 @@ navigate("/")
             </button>
           )}
           {currentStep === steps.length - 1 ? (
-            <button
-              className="register-submit-btn"
-              onClick={handleSubmit}
-            >
-              Complete Registration
-            </button>
-          ) : (
-            <button className="register-continue-btn" onClick={handleNext}>
-              Continue
-            </button>
-          )}
+  updatebtn ? (
+    <button className="register-submit-btn" onClick={handleUpdate}>
+      Update Details
+    </button>
+  ) : (
+    <button className="register-submit-btn" onClick={handleSubmit}>
+      Complete Registration
+    </button>
+  )
+) : (
+  <button className="register-continue-btn" onClick={handleNext}>
+    Continue
+  </button>
+)}
+
+
+         
         </div>
       </div>
 

@@ -27,6 +27,7 @@ import LinkedInSuccess from "./pages/Auth/linkdinsuccess";
 
 
 
+
 export default function App() {
 
  
@@ -52,6 +53,7 @@ export default function App() {
              
       </Routes>
     </Router>
-       <ToastContainer position="top-right" autoClose={3000} /></>
+       <ToastContainer position="top-right" autoClose={3000} />
+ </>
   );
 }

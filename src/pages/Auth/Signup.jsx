@@ -158,13 +158,17 @@ const linkdinlogin=()=>{
               onChange={handleChange}
             />
             <div className="input-row">
-              <input
-                type="text"
-                name="gender"
-                placeholder="Gender"
-                value={formData.gender}
-                onChange={handleChange}
-              />
+             <select
+    name="gender"
+    value={formData.gender}
+    onChange={handleChange}
+  >
+    <option value="">Select Gender</option>
+    <option value="Female">Female</option>
+    <option value="Male">Male</option>
+    <option value="Non-Binary">Non-Binary</option>
+    <option value="Prefer not to say">Prefer not to say</option>
+  </select>
               <input
                 type="text"
                 name="jobStatus"

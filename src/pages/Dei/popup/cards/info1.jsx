@@ -41,9 +41,17 @@ const InfoFirst = ({data,setData}) => {
         onChange={handleChange}
       >
         <option value="">Select your Industry</option>
-        <option value="IT">IT</option>
-        <option value="Healthcare">Healthcare</option>
-        <option value="Finance">Finance</option>
+    
+      {[
+        "Accounting", "Advertising", "Aerospace", "Agriculture", "Automotive",
+        "Biotechnology", "Construction", "Consulting", "Education", "Energy",
+        "Finance", "Food & Beverage", "Healthcare", "Hospitality",
+        "Information Technology", "Legal", "Manufacturing", "Media",
+        "Real Estate", "Retail", "Telecommunications", "Transportation",
+        "Travel", "Utilities"
+      ].map((industry) => (
+        <option key={industry} value={industry}>{industry}</option>
+      ))}
         {/* Add more options as needed */}
       </select>
 

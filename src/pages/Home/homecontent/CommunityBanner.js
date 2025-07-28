@@ -37,11 +37,11 @@ function CommunityBanner() {
           <div>
             <h4>Platform</h4>
             <ul>
-              <li>Academy</li>
+              <li onClick={() => navigate("/Academy")} style={{ cursor: "pointer"}}>Academy</li>
               {/* <li>Marketplace</li>
               <li>CXO On Demand</li> */}
-              <li>Community</li>
-              <li>DEI Benchmark</li>
+              <li onClick={() => navigate("/Community")} style={{ cursor: "pointer"}}>Community</li>
+              <li onClick={() => navigate("/DEITalent")} style={{ cursor: "pointer"}}>DEI Benchmark</li>
             </ul>
           </div>
 
@@ -60,7 +60,7 @@ function CommunityBanner() {
             <h4>Subscribe</h4>
             <p className="para">Get the latest updates and offers.</p>
             <form>
-              <div>
+              <div style={{ cursor: "pointer"}}>
               <input type="email" placeholder="Your email" />
               <button type="submit">Subscribe</button>
               </div>

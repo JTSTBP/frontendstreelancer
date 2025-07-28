@@ -23,6 +23,9 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
     setIsLoggedIn(false);
     navigate("/login");
   };
+  const handlechangepath=()=>{
+  navigate("/Registration")
+  }
 
   // Close dropdowns when clicking outside
   useEffect(() => {
@@ -86,7 +89,7 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
               <MdKeyboardArrowDown onClick={toggleProfileDropdown} className="dropdown-arrow"/>
               {showProfileDropdown && (
                 <div className="profile-dropdown">
-                  <div className="dropdown-item"><RiEqualizerLine /> Account</div>
+                  <div className="dropdown-item"  onClick={handlechangepath}><RiEqualizerLine /> Account</div>
                   <div className="dropdown-item"><CiSettings /> Settings</div>
                   <div className="dropdown-item" onClick={handleLogout}><IoIosLogOut /> Log Out</div>
                 </div>

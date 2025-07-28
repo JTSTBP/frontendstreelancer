@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import { FaGoogle, FaFacebook, FaLinkedin } from "react-icons/fa";
 import "./auth.css";
 import { useNavigate } from "react-router-dom";
@@ -15,7 +15,11 @@ import { jwtDecode } from 'jwt-decode';
 
 
 
+
+
 const Login = () => {
+  
+  
   const navigate = useNavigate();
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [message, setMessage] = useState("");
@@ -52,12 +56,21 @@ setMessageType("");
         body: JSON.stringify(formData),
       });
   const data = await response.json();
-
+   console.log(data,"data")
+   
         if (response.ok) {
            localStorage.setItem("token", data.token); 
       setMessageType("Success");
       setMessage(data.message || "Login successful! Redirecting...");
-      setTimeout(() => navigate("/"), 2500);
+
+    setTimeout(() => {
+        if (data.userDetails && Object.keys(data.userDetails).length > 0) {
+      
+          navigate("/");  // Home page
+        } else {
+          navigate("/register"); // Registration page
+        }
+      }, 2500);
     } else {
       setMessageType("error");
       setMessage(data.message || "Login failed.");
@@ -119,6 +132,7 @@ const facebookLogin = () => {
         });
 
         const data = await res.json();
+        console.log(data,"data")
 
         if (res.ok) {
           setMessageType("Success");
