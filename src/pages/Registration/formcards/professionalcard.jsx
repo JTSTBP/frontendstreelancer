@@ -1,8 +1,12 @@
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./formcard.css";
+import Backendurl from "../../../config"
 
 const ProfessionalBackgroundCard = ({ formData, setFormData }) => {
+  const [industries,setIndustries]= useState([])
+  const [showAllIndustries, setShowAllIndustries] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -44,16 +48,27 @@ const ProfessionalBackgroundCard = ({ formData, setFormData }) => {
     }));
   };
 
-  const industries = [
-    "Technology",
-    "Healthcare",
-    "Retail & E-commerce",
-    "Manufacturing",
-    "Finance & Banking",
-    "Education",
-    "Marketing & Advertising",
-    "Consulting",
-  ];
+   useEffect(() => {
+      const fetchIndustries = async () => {
+        try {
+          
+          const url =
+            `${Backendurl}/api/data/getindustries`;
+      
+          fetch(url)
+        .then((res) => res.json())
+        .then((data) => setIndustries(data))
+        .catch((err) => console.error("Error fetching all Industries:", err));
+          
+        } catch (error) {
+          console.error("Error fetching industries:", error);
+        }
+      };
+  
+      fetchIndustries();
+    }, []);
+
+
 
   const skills = [
     "Microsoft Office",
@@ -66,6 +81,9 @@ const ProfessionalBackgroundCard = ({ formData, setFormData }) => {
     "Salesforce",
     "Programming",
   ];
+
+
+  const visibleIndustries = showAllIndustries ? industries : industries.slice(0, 5);
 
   return (
     <div className="registration-form-container">
@@ -105,8 +123,8 @@ const ProfessionalBackgroundCard = ({ formData, setFormData }) => {
           </div>
         </div>
 
-        {/* Industries */}
-        <div className="dei-info">
+      
+        {/* <div className="dei-info">
           <p className="form-label-link">Industries</p>
           <small className="sm-dei">
             Select all industries you have experience in (up to 3)
@@ -114,18 +132,51 @@ const ProfessionalBackgroundCard = ({ formData, setFormData }) => {
         </div>
         <div className="checkbox-grid">
           {industries.map((industry) => (
-            <label key={industry} className="checkbox-option">
+            <label key={industry.id} className="checkbox-option">
               <input
                 type="checkbox"
                 checked={
-                  formData.professional?.industries?.includes(industry) || false
+                  formData.professional?.industries?.includes(industry.name) || false
                 }
-                onChange={() => handleCheckboxList("industries", industry)}
+                onChange={() => handleCheckboxList("industries", industry.name)}
               />
-              {industry}
+              {industry.name}
             </label>
           ))}
-        </div>
+        </div> */}
+
+        {/* Industries */}
+<div className="dei-info">
+  <p className="form-label-link">Industries</p>
+  <small className="sm-dei">
+    Select all industries you have experience in (up to 3)
+  </small>
+</div>
+<div className="checkbox-grid">
+  {visibleIndustries.map((industry) => (
+    <label key={industry._id} className="checkbox-option">
+      <input
+        type="checkbox"
+        checked={
+          formData.professional?.industries?.includes(industry.name) || false
+        }
+        onChange={() => handleCheckboxList("industries", industry.name)}
+      />
+      {industry.name}
+    </label>
+  ))}
+</div>
+{industries.length > 5 && (
+  <button
+    type="button"
+    className="show-more-btn"
+    onClick={() => setShowAllIndustries(!showAllIndustries)}
+  >
+    {showAllIndustries ? "<---Show Less" : "Show More--->"}
+  </button>
+)}
+
+        
 
         {/* Tools & Skills */}
         <div className="dei-info">

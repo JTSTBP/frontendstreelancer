@@ -107,7 +107,8 @@ const info1Schema = Joi.object({
     "any.required": `"Phone" is required`
   }),
   gender: Joi.string().valid("female", "other").required().label("Gender"),
-  country: Joi.string().required().label("Country"),
+  country: Joi.string().label("Country"),
+  state:Joi.string().label("State"),
   city: Joi.string().allow("").label("City"),
   careerBreak: Joi.boolean().label("Career Break"),
   deiIdentities: Joi.array().items(Joi.string()).label("DEI Identities")

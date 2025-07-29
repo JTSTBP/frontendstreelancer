@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from "axios";
+import Backendurl from "../../../../config"
 
 
 const InfoFirst = ({data,setData}) => {
+   const [industries, setIndustries] = useState([]);
   // const [info1Data, setInfo1Data] = useState({
   //   companyName: '',
   //   industry: '',
@@ -9,6 +12,28 @@ const InfoFirst = ({data,setData}) => {
   //   fullName: '',
   //   email: '',
   // });
+
+  useEffect(() => {
+    const fetchIndustries = async () => {
+      try {
+        // Fetch industries from Wikidata (industry concept Q9415)
+        const url =
+          `${Backendurl}/api/data/getindustries`;
+    
+        fetch(url)
+      .then((res) => res.json())
+      .then((data) => setIndustries(data))
+      .catch((err) => console.error("Error fetching all Industries:", err));
+        
+      } catch (error) {
+        console.error("Error fetching industries:", error);
+      }
+    };
+
+    fetchIndustries();
+  }, []);
+
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -42,15 +67,8 @@ const InfoFirst = ({data,setData}) => {
       >
         <option value="">Select your Industry</option>
     
-      {[
-        "Accounting", "Advertising", "Aerospace", "Agriculture", "Automotive",
-        "Biotechnology", "Construction", "Consulting", "Education", "Energy",
-        "Finance", "Food & Beverage", "Healthcare", "Hospitality",
-        "Information Technology", "Legal", "Manufacturing", "Media",
-        "Real Estate", "Retail", "Telecommunications", "Transportation",
-        "Travel", "Utilities"
-      ].map((industry) => (
-        <option key={industry} value={industry}>{industry}</option>
+      {industries.map((industry) => (
+        <option key={industry.id} value={industry.name}>{industry.name}</option>
       ))}
         {/* Add more options as needed */}
       </select>
