@@ -12,6 +12,7 @@ import { GoogleLogin } from '@react-oauth/google';
 
 import { useGoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from 'jwt-decode';
+import { useEffect } from "react";
 
 
 
@@ -21,10 +22,16 @@ const Login = () => {
   
   
   const navigate = useNavigate();
+    const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("token"));
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [message, setMessage] = useState("");
   const [messageType, setMessageType] = useState(""); // 'success' | 'error'
 
+
+ useEffect(() => {
+    isLoggedIn&&navigate("/Registration")
+    
+  }, []);
 console.log(Backendurl,"Backendurl" , process.env.NODE_ENV,LINKEDIN_REDIRECT_URI)
   // Handle input changes
   const handleChange = (e) => {

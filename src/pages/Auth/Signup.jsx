@@ -15,6 +15,7 @@ import { useGoogleLogin } from '@react-oauth/google';
 const images = [slide1, slide2, slide3];
 
 const Signup = () => {
+    const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem("token"));
   const [formData, setFormData] = useState({
     fullName: "",
     gender: "",
@@ -30,6 +31,7 @@ const Signup = () => {
 console.log(Backendurl,"Backendurl")
   // Carousel effect
   useEffect(() => {
+    isLoggedIn&&navigate("/Registration")
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
     }, 3000);
