@@ -40,12 +40,12 @@ setEmail("")
     <div className="start-dei-container">
       <h2>Start Your DEI Journey Today</h2>
       <p className="subtext">
-        Get your personalized DEI score and actionable recommendations to create a more inclusive workplace
+      Get Your Personalized DEI Score + Actionable Roadmap for Inclusion
       </p>
 
       <input
         type="email"
-        placeholder="Enter your email"
+        placeholder="📩 Enter your email to get started:"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         className="dei-input"

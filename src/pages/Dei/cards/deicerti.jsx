@@ -9,16 +9,22 @@ const DEICertification = () => {
         <h3>Benefits of DEI Certification</h3>
         <ul>
           <li>
-            <span className="check">✓</span>
-            Showcase your commitment to inclusion across platforms and proposals.
+            <span className="check"></span>
+           ✅ Demonstrate Inclusion, Everywhere
+
+
           </li>
           <li>
-            <span className="check">✓</span>
-            Appeal to job seekers looking for safe, equitable workplaces.
+            <span className="check"></span>
+           ✅ Attract Top Job Seekers
+
+
           </li>
           <li>
-            <span className="check">✓</span>
-            Use your certification to enhance ESG scores and win DEI-sensitive contracts.
+            <span className="check"></span>
+           ✅ Strengthen Your ESG & Win More Contracts
+
+
           </li>
         </ul>
       </div>

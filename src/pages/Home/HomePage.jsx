@@ -29,33 +29,33 @@ const HomePage = () => {
       <section className="hero">
         <div className="hero-text">
           <div>
-            <h1>Hire Smarter. Hire Women.
+            <h1>Smarter Hiring Starts With Women
 </h1>
             <p>
-            Remote, Hybrid & Fractional. Vetted. Managed. Ready in 72 hours.
+            On-Demand, Vetted & Managed Talent—Ready in 72 Hours!
 
             </p>
             <div className="hero-buttons">
-              <button className="btn-primary standard-btn" onClick={()=>{ navigate("/DEITalenthire")}}>Hire Talent </button>
-              <button className="btn-primary btn-outline standard-btn" onClick={()=>{ navigate("/Signup")}}>Register Now</button>
+              <button className="btn-primary standard-btn" onClick={()=>{ navigate("/DEITalenthire")}}>GET TALENT NOW </button>
+              <button className="btn-primary btn-outline standard-btn" onClick={()=>{ navigate("/Signup")}}>JOIN OUR NETWORK</button>
             </div>
             <ul className="features">
               <li>
                 <span>
                   <img src={require("../../images/done.png")} />
                 </span>
-               Fully managed — no HR hassle
+               Zero HR Headaches—We Handle Everything!
               </li>
               <li>
                 <span>
                   <img src={require("../../images/done.png")} />
                 </span>
-                Remote, Hybrid & Fractional models
+               Flexible Hiring: Remote, Hybrid, or Part-Time
 
               </li>
               <li>
                 <img src={require("../../images/done.png")} />
-               DEI-aligned, vetted professionals
+              DEI-Certified Talent, Pre-Vetted for Excellence
 
               </li>
             </ul>

@@ -27,19 +27,19 @@ const StreelancerSteps = () => {
      const navigate = useNavigate();
   return (
     <div className="main-container">
-      <h2 className="title">Your Journey, Your Way
+      <h2 className="title">✨ YOUR DREAM CAREER PATH
 </h2>
       <p className="subtitle">
-Step into curated, job-ready opportunities — tailored to your skills, goals, and story.
+Tailored for your skills – Designed for your success
       </p>
 
       {/* Top Steps */}
       <div className="steps-grid">
         {[
-          { num: "1", title: "Create Your Profile", desc: "Complete your profile and take our career assessment quiz" },
-          { num: "2", title: "Smart Routing", desc: "Get personalized recommendations based on your skills and goals" },
-          { num: "3", title: "Learn & Build Profile", desc: "Enhance your skills and create a standout professional profile" },
-          { num: "4", title: "Get Hired", desc: "Connect with employers and secure remote opportunities that match your profile" }
+          { num: "1", title: "Create Your Profile", desc: "2-minute signup + career quiz = matches made for you",desc2:"📌 We highlight your strongest skills automatically" },
+          { num: "2", title: "Smart Matching", desc: "Get handpicked opportunities (no more job board hunting!)" ,desc2:"🎯 AI-powered recommendations based on your goals"},
+          { num: "3", title: "Skill Boost", desc: "Free training to fill any gaps + profile polishing",desc2:"📈 Learn exactly what employers want" },
+          { num: "4", title: "Get Hired", desc: "Direct intros to employers who value your story",desc2:"💼 85% placement rate for completed profiles" }
         ].map((step, idx) => (
           <div className="step-card" key={idx}>
             <div className='step-zero'></div>
@@ -52,7 +52,10 @@ Step into curated, job-ready opportunities — tailored to your skills, goals, a
             <div >
                 <img className="ic1" src={stepIcons[idx]}/>
              
-            <p className="step-desc" style={{textAlign:"center"}}>{step.desc}</p>
+            <p className="step-desc" style={{textAlign:"center"}}>{step.desc}
+              <br/>
+              {step.desc2}
+            </p>
             </div>
              
           </div>
@@ -61,8 +64,8 @@ Step into curated, job-ready opportunities — tailored to your skills, goals, a
 
       {/* home-divider */}
       <div className="home-divider">
-        <h2>Find The Right Person For The Job</h2>
-        <p>Pre-vetted, DEI-aligned remote talent</p>
+        <h2>🚀 Find Your Perfect Hire in 72 Hours</h2>
+        <p>DEI-verified remote talent, ready to deliver from day one</p>
       </div>
 
  
@@ -71,19 +74,36 @@ Step into curated, job-ready opportunities — tailored to your skills, goals, a
       {/* Bottom Section */}
       <div className="bottom-section">
         <div className="employer-box">
-          <h3>Why Employers Choose Streelancer ?</h3>
+          <h3>Why Top Companies Choose Us</h3>
           <div className="employer-point">
-            <strong>Diverse Talent Pool</strong>
-            <p>Professionals with versatile skills, backgrounds, and more from untapped segments.
+            <strong>🌍 Deep Talent Network</strong>
+            <p>Access skilled professionals from underrepresented groups
+              <br/>
+              → Expand your hiring pipeline by 3X
 </p>
           </div>
           <div className="employer-point">
-            <strong>Verified Profiles with DEI Tags</strong>
-            <p>All candidates are assessed for skills and inclusivity, ensuring workplace equity</p>
+            <strong>✅ Zero-Risk Hiring</strong>
+            <p>Every candidate is pre-vetted for:
+              <br/>
+✔ Hard skills
+ <br/>
+✔ Soft skills
+ <br/>
+✔ Inclusive mindset
+</p>
           </div>
           <div className="employer-point">
-            <strong>DEI Hiring Dashboard</strong>
-            <p>Track impact and inclusion through your personalized hiring dashboard.</p>
+            <strong>📊 Real-Time DEI Analytics</strong>
+            <p>Track your progress with metrics that matter:
+              <br/>
+              • Team diversity growth
+               <br/>
+• Inclusion scores
+ <br/>
+• Retention improvements
+
+            </p>
           </div>
         </div>
 

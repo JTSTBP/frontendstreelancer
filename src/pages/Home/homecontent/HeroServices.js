@@ -12,21 +12,21 @@ import img3 from "../../../images/offer3.png"
 function HeroServices() {
   return (
     <section className="hero-services">
-      <h2 className="hero-title">What We Offer
+      <h2 className="hero-title">🚀 Your Strategic Advantage
 </h2>
       <p className="hero-subtitle">
-       Everything you need to build skills, hire talent, and drive impact — all in one place.
+       Hire smarter • Upskill faster • Measure impact — all under one roof
       </p>
 
       <div className="services-grid">
        
  <ServiceCard
-          title="DEI Impact"
+          title="📊 DEI Impact Dashboard"
           className="bluecard"
-          subtitle="Score Card"
+          // subtitle="Score Card"
           points={[
           
-            "Measure and benchmark your workplace inclusion with actionable insights."
+            "Get real-time inclusion analytics + actionable improvement plans"
           ]}
           
            mainImage={img1}
@@ -35,11 +35,11 @@ function HeroServices() {
         />
 
         <ServiceCard
-          title="Remote"
+          title="👩‍💻 On-Demand Talent Network"
           className="pinkcard gap-ordcard"
-          subtitle="Talent Network"
+          // subtitle="Talent Network"
           points={[
-            "Hire pre-vetted, remote-ready women professionals — fast and hassle-free.",
+            "72-hour access to pre-vetted women professionals (zero hiring friction",
            
           ]}
           
@@ -49,12 +49,12 @@ function HeroServices() {
         />
        
                 <ServiceCard
-          title="Academy"
+          title="🎯 Skills Accelerator"
           className="orgcard"
-          subtitle="Learn New Skills"
+          // subtitle="Learn New Skills"
           points={[
             
-            "Upskill and get placement-ready for high-demand, industry-relevant roles."
+            "Upskill teams for in-demand roles with 94% placement success"
           ]}
       
           mainImage={img3}

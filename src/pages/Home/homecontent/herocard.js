@@ -5,9 +5,9 @@ import { useNavigate } from 'react-router-dom';
 
 function ServiceCard({ title, subtitle, points, mainImage, altText, className  ,customStyle,navigateTo}) {
   const navigate =useNavigate()
-   console.log(navigateTo,"navigateToyyyyy")
+
   const handleNavigate=()=>{
-   console.log(navigateTo,"navigateTo")
+
    navigate(navigateTo)
   }
   return (

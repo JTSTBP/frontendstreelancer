@@ -9,13 +9,17 @@ import grt5 from "../../../images/grt5.png";
 import grt6 from "../../../images/grt6.png";
 
 // ✅ Reusable Card Component
-const IndustryCard = ({ title, description, icon ,class:cardclass}) => {
+const IndustryCard = ({ title,points, description, icon ,class:cardclass}) => {
+  console.log(points,"poi")
    
   return (
     <div className={`${cardclass} findgreat-industry-card`}>
       <div>
         <h3>{title}</h3>
         <p>{description}</p>
+{points && <p>{points.map((point, index) => <span key={index}>{point}<br/></span>)}</p>}
+
+        
       </div>
       <div className="findgreat-icon">
         <img src={icon} alt={`${title} icon`} />
@@ -34,17 +38,42 @@ const FindGreatWork = () => {
       class:"blue"
     },
      {
+      title: "🚛 Supercharge Your FMCG Operations",
+      // description: "Roles: Telesales, order processing, digital outreach, MIS reporting.",
+      pointwise:[
+        "✔ Expert Telesales Teams – Convert more calls",
+"✔ Frictionless Order Processing – Ship faster",
+
+      ],
+      icon: grt5,
+       class:"orange"
+    },
+     {
+      title: "BFSI",
+      
+      pointwise:["🔹 Customer Support Pros",
+"🔹 Document Verification Experts",
+"🔹 Tele-Verification Specialists"
+],
+      icon: grt4,
+       class:"blue"
+    },
+     {
       title: " Retail, D2C & E-Commerce",
       description: "Roles: Catalog management, customer queries, digital campaign assistants.",
       icon: grt2,
         class:"orange"
     },
      {
-      title: "BFSI",
-      description: "Roles: Customer care, document verification, tele-verification.",
-      icon: grt4,
-       class:"blue"
+      title: "Logistics, Infrastructure & Construction",
+     
+      pointwise:["🔹 Virtual Ticketing & Dispatch Pros",
+        "🔹 Route Optimization Support ",
+        "🔹 Remote Admin Teams"],
+      icon: grt6,
+        class:"blue"
     },
+    
     {
       title: "Healthcare & Pharmaceuticals",
       description: "Roles: Teleconsultation support, claims processing, regulatory documentation.",
@@ -53,19 +82,9 @@ const FindGreatWork = () => {
     },
    
    
-    {
-      title: "Logistics, Infrastructure & Construction",
-      description: "Ticket desk, route support, virtual admins  Daily ops support with zero infra burden",
-      icon: grt6,
-        class:"blue"
-    },
+   
 
-    {
-      title: "FMCG & Consumer Goods",
-      description: "Roles: Telesales, order processing, digital outreach, MIS reporting.",
-      icon: grt5,
-       class:"orange"
-    }
+   
   ]
 
   const [current, setCurrent] = useState(0);
@@ -84,9 +103,8 @@ const FindGreatWork = () => {
     <div className="findgreat-work-container">
       <h2 className="findgreat-heading">Hire DEI-Verified Talent</h2>
       <p className="findgreat-subheading">
-    Partner with skilled, diverse women to grow your business — while making a measurable impact.
-
-
+    Grow Your Business with Top Women Talent—
+& Track Your DEI Impact in Real-Time!
       </p>
       <div className="findgreat-work-content">
         <div className="findgreat-industries-carousel">
@@ -102,6 +120,7 @@ const FindGreatWork = () => {
                 <IndustryCard
                   key={i}
                   title={card.title}
+                  points={card.pointwise}
                   description={card.description}
                   icon={card.icon}
                   class={card.class}
@@ -116,7 +135,7 @@ const FindGreatWork = () => {
           <img src={handshakeImage} alt="Handshake" />
         </div>
       </div>
-        <button className="findgreat-hire-now standard-btn" onClick={()=>{ navigate("/DEITalenthire")}}>Hire Now</button>
+        <button className="findgreat-hire-now standard-btn" onClick={()=>{ navigate("/DEITalenthire")}}>Get Your Team Now</button>
           <div className="carousel-dots">
             {[...Array(cards.length / 2)].map((_, idx) => (
               <span

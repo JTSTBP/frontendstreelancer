@@ -88,11 +88,11 @@ const WorkforceComposition = ({ data, setData }) => {
         <label>
           <input
             type="checkbox"
-            value="Fresh Freelancers & Students"
-            checked={data.info2.selectedGroups?.includes("Fresh Freelancers & Students") || false}
+            value="Fresh Streelancer & Students"
+            checked={data.info2.selectedGroups?.includes("Fresh Streelancer & Students") || false}
             onChange={handleCheckboxChange}
           />
-          Fresh Freelancers & Students
+          Fresh Streelancer & Students
         </label>
 
         <label>

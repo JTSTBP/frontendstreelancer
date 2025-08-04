@@ -10,9 +10,9 @@ const Deifeatures = ({ onTakeSurveyClick,onBookConsultClick }) => {
     <div className="flex-features-container">
       <div className="left-section">
         <img src={arrowCircle} alt="Big Circle" className="big-circle" />
-        <h2>Build a DEI-Ready Team Without the Hassle</h2>
+        <h2>Build Your Diversity Pipeline—Effortlessly</h2>
         <p>
-         Streelancer helps Indian companies hire verified, diverse women talent—returnees, homebound, and hybrid-ready—across remote, hybrid, and fractional roles. Backed by Jobs Territory, we provide a fully managed hiring experience.
+        Streelancer helps Indian companies hire skilled women professionals—from returnees to hybrid-ready talent—across remote, hybrid, and fractional roles.
         </p>
 
       

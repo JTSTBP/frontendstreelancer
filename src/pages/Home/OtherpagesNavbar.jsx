@@ -42,7 +42,7 @@ const SampleNavbar = ({ isLoggedIn, setIsLoggedIn }) => {
     <nav className="sample-navbar navbar">
      
   <div className="logo">
-        <img src={require("../../images/logo.png")} alt="Streelancer Logo" />
+        <img src={require("../../images/logo.png")} onClick={() => {navigate("/")}} alt="Streelancer Logo" />
       </div>
       <ul className={`nav-links ${menuOpen ? "open" : "close"}`}>
         <li onClick={() => {navigate("/");setMenuOpen(false)}}className="for-color">Home</li>
@@ -74,7 +74,7 @@ const SampleNavbar = ({ isLoggedIn, setIsLoggedIn }) => {
         
         <li onClick={() => { navigate("/Academy"); setMenuOpen(false)}} className="for-color">Academy</li>
         <li onClick={() =>{ navigate("/Community");  setMenuOpen(false)}} className="for-color">Community</li>
-
+     <li onClick={() =>{ navigate("/AboutUs");  setMenuOpen(false)}} className="for-color">About Us</li>
       
         
       </ul>

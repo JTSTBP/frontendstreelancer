@@ -5,23 +5,23 @@ import card2img from "../../../../images/card2img.png"
 const Card2 = () => {
   return (
     <div className="hiring-card dei-badge-card">
-      <h3>Hiring Impact Visibility</h3>
+      <h3>💼 ATTRACT TOP DIVERSE TALENT</h3>
       <p>
-        Attract top diverse talent by demonstrating your commitment to creating an inclusive
-        workplace environment.
+       Candidates are watching.
+       <br/>Prove your workplace is inclusive, equitable, and empowering.
       </p>
 
       <div className="application-stats">
         <div className="stat-row">
-          <span>Candidate Applications</span>
+          <span>📈 Applications from women</span>
           <span className="stat-percent">+32%</span>
         </div>
         <div className="stat-row">
-          <span>Candidate Applications</span>
+          <span>📈 Applications from LGBTQ+</span>
           <span className="stat-percent">+47%</span>
         </div>
         <div className="stat-row">
-          <span>Candidate Applications</span>
+          <span>📈 Applications from persons with disabilities</span>
           <span className="stat-percent">+28%</span>
         </div>
       </div>

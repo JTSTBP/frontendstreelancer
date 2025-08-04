@@ -9,32 +9,32 @@ import icon6 from "../../../images/choose6.png"
 const features = [
   {
     title: "Verified Talent Pool",
-    desc: "Access 10,000+ talent jobs, ready across professional roles, seniority levels and experience levels.",
+    desc: "Access 10,000+ pre-vetted women professionals—across industries, experience levels, and seniority tiers.",
     icon: icon1
   },
   {
-    title: "DEI Compliance",
-    desc: "Comprehensive DEI standards and employer badges to showcase your commitment to diversity and inclusion.",
+    title: "DEI-First & Compliant",
+    desc: "Our platform meets comprehensive DEI standards and provides employer certification badges, helping you showcase real commitment to inclusion.",
     icon: icon2
   },
   {
-    title: "Smart Workdays",
-    desc: "Our 4-hour workday model ensures higher productivity, better work-life balance, and increased loyalty.",
+    title: "Smart Workdays. Real Impact",
+    desc: "Our 4-hour workday model promotes higher productivity, stronger retention, and better work-life balance—tailored for modern teams.",
     icon: icon3
   },
   {
-    title: "Quality Roles",
-    desc: "Our 5-step vetting model ensures verified roles, credible employers, and increased loyalty.",
+    title: "Only Quality Roles",
+    desc: "We use a 5-step vetting process to ensure every opportunity is legitimate, verified, and purposeful—benefiting both talent and employers.",
     icon: icon4
   },
   {
-    title: "Fully Managed",
-    desc: "We handle onboarding, coordination, and streamlined work delivery, so you focus on core business.",
+    title: "Fully Managed. Zero Hassle.",
+    desc: "We take care of onboarding, coordination, and streamlined delivery—so you stay focused on core business goals while scaling inclusively.",
     icon: icon5
   },
   {
-    title: "Impact Tracking",
-    desc: "Monthly DEI dashboards to measure and showcase the impact of your inclusive hiring practices.",
+    title: "Impact You Can Measure",
+    desc: "Get access to monthly DEI dashboards that track your inclusive hiring progress and communicate it to internal and external stakeholders.",
     icon: icon6
   }
 ];
@@ -43,9 +43,9 @@ const WhyChooseUs = () => {
   return (
     <div className="why-container">
       <div className="why-left">
-        <h2>Why Choose Us</h2>
+        <h2>Why Choose Streelancer</h2>
         <p className="why-subtext">
-          Our platform offers unique advantages for businesses looking to build diverse, flexible teams
+          Build Diverse, Flexible Teams—Backed by a Platform That Does the Heavy Lifting
         </p>
 
         <div className="why-cards">

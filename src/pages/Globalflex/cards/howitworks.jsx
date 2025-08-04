@@ -8,23 +8,23 @@ import step4 from "../../../images/step4.png"
 const HowItWorks = () => {
  const steps = [
   {
-    title: 'Share Your Role Requirements',
+    title: 'Share Your Requirements',
     description:
-      "Tell us what roles you need and the skills you’re looking for.",
+      "Tell us what role you need — we match by skills, experience & fit.",
     color: '#f8d7e0',
     img: step1, // Assuming you're using the same step image variable names
   },
   {
     title: 'Get Vetted Profiles',
     description:
-      "We share pre-screened professionals ready to join your team.",
+      "Receive pre-screened, DEI-aligned professionals — ready to deploy.",
     color: '#e5d8f6',
     img: step2,
   },
   {
     title: 'Onboard in 72 Hours',
     description:
-      'We handle hiring formalities so your team can get started quickly.',
+      'We handle hiring, documentation & onboarding — so you don’t have to.',
     color: '#f8d7e0',
     img: step3,
   },
@@ -35,8 +35,7 @@ const HowItWorks = () => {
     <div className="howitworks-container">
         <h1>How It Works</h1>
         <p className="subtitle">
-          Our simple process connects you with the right remote talent — fast and hassle-free.
-
+         Hire remote-ready women talent in just 3 simple steps — fast, flexible, and fully managed.
         </p>
         <div className='howitworks-content'>
          <div className="howitworks-image">

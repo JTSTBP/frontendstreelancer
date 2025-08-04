@@ -181,7 +181,7 @@
 }
 
 .badge-images img {
-  width: 55px;
+  width: 70px;
   height: auto;
 }
 
@@ -436,7 +436,7 @@ display: flex
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     /* color: #4b0082; */
-    font-size: var(--smallparafont);
+    font-size: var(--parafont);
     border: 1px solid #948E8E;
 }
 

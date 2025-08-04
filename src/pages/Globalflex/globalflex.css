@@ -89,7 +89,7 @@ display: flex
 
 .big-circle {
   width: 100%;
-  max-width: 300px;
+  max-width: 390px;
 }
 
 .small-circle {
@@ -133,6 +133,7 @@ display: flex
   .flex-features-container {
     flex-direction: column;
     padding: 2rem 1rem;
+    gap: 36px;
   }
 
 
@@ -203,7 +204,7 @@ display: flex
 
 .solution-card img {
   width: 100%;
-  max-height: 120px;
+  max-height: 180px;
   object-fit: contain;
   margin-bottom: 1rem;
 }
@@ -380,7 +381,7 @@ align-items: center;
 
 .global-header p {
   margin-top: 0.5rem;
-  font-size: 14px;
+  font-size: var(--parafont);
 }
 
 .global-formbox {

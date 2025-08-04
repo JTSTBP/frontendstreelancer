@@ -2,6 +2,9 @@ import { useNavigate } from "react-router-dom";
 
 function CommunityBanner() {
   const navigate = useNavigate();
+   const openLink = (url) => {
+    window.open(url, "_blank");
+  };
 
   return (
     <section className="community-section">
@@ -26,9 +29,13 @@ function CommunityBanner() {
           <img src={require("../../../images/logo1.png")}/>
           <p>India’s largest women-first platform for inclusive career building.</p>
           <div className="social-icons">
-            <i className="fab fa-linkedin"></i>
+            <i className="fab fa-linkedin" onClick={() =>
+                openLink("https://www.linkedin.com/company/streelancer/")
+              }></i>
             <i className="fab fa-facebook"></i>
-            <i className="fab fa-instagram"></i>
+            <i className="fab fa-instagram"  onClick={() =>
+                openLink("https://www.instagram.com/_streelancer/")
+              }></i>
             <i className="fas fa-times"></i>
           </div>
         </div>
@@ -48,7 +55,7 @@ function CommunityBanner() {
           <div>
             <h4>Company</h4>
             <ul>
-              <li>About Us</li>
+              <li onClick={()=>navigate("/AboutUs")}>About Us</li>
               <li>Careers</li>
               <li>Blog</li>
               <li>Press</li>
@@ -65,7 +72,7 @@ function CommunityBanner() {
               <button type="submit">Subscribe</button>
               </div>
               <p className="privacy-text">
-                By subscribing, you agree to our <a href="/">Privacy Policy</a>.
+                By subscribing, you agree to our <a href="/Termsandconditions">Privacy Policy</a>.
               </p>
             </form>
           </div>

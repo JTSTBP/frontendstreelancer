@@ -20,6 +20,8 @@ import ComingSoon from "./pages/Academy/academypage";
 import Skills from "./pages/Services/skills";
 import Talent from "./pages/Services/talent";
 import LinkedInSuccess from "./pages/Auth/linkdinsuccess";
+import AboutUs from "./pages/Aboutus/Aboutus";
+import Termsandconditions from "./pages/Termsandconditions/termsandconditions";
 
 
 
@@ -48,6 +50,8 @@ export default function App() {
               <Route path="/Community/foundermistake" element={<FoundersMistakes />} />
                <Route path="/Community/Skills" element={<Skills />} />
                 <Route path="/Community/Talent" element={<Talent />} />
+                   <Route path="/AboutUs" element={<AboutUs />} />
+                   <Route path="/Termsandconditions" element={<Termsandconditions/>}/>
 
  <Route path="/linkedin-success" element={<LinkedInSuccess />} />
              

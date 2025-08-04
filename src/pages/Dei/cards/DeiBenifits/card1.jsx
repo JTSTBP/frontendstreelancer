@@ -9,10 +9,9 @@ import ribbonIcon from '../../../../images/bardge.png'; // bottom right circular
 const DEIBadge = () => {
   return (
     <div className="dei-badge-card">
-      <h3 className="dei-badge-title">DEI Badge</h3>
+      <h3 className="dei-badge-title">🏅 Earn Your DEI Badge</h3>
       <p className="dei-badge-description">
-        Earn an official DEI certification badge to display on your website,
-        recruitment materials, and corporate communications.
+       Display your official DEI Certification Badge on your website, job postings, recruitment decks, and internal communications.
       </p>
       <div className="badge-images">
         <img src={goldBadge} alt="Gold Badge" />

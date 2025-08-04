@@ -9,7 +9,7 @@ const DEIBadges = () => {
     <div className="dei-badges-container">
       <h2>Your DEI Achievement Badge</h2>
       <p className="subheading">
-        Showcase your commitment to diversity, equity, and inclusion with tangible credentials
+       A Visible Symbol of Your Inclusion Commitment
       </p>
 
       <div className="badges">
@@ -21,7 +21,9 @@ const DEIBadges = () => {
       </div>
 
       <div className="description-box">
-        Each badge level represents your organization's progress on the DEI journey. Badges can be displayed on your website, recruitment materials, and corporate communications to showcase your commitment to creating an inclusive workplace.
+       🏅 Badge Levels Reflect Your Progress
+Each badge—Bronze, Silver, or Gold—represents your current position on the DEI Maturity Curve and your ongoing journey toward greater inclusion.
+
       </div>
     </div>
   );

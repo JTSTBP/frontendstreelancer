@@ -19,7 +19,7 @@ const Deitalentbanner = () => {
           
           <h1>Streelancer for Indian Enterprises</h1>
           <p>
-          Flexible. Purpose-Driven. DEI-Compliant.
+          Flexible • Purpose-Driven • DEI Compliant
           </p>
         </div>
       </div>

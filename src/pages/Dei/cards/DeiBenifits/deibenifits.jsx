@@ -11,7 +11,7 @@ const Deibenifits = () => {
     <div className="benefits-container">
       <h2 className="benefits-heading">Benefits for Companies</h2>
       <p className="benefits-subheading">
-        Showcase your commitment to diversity, equity, and inclusion with tangible credentials
+       Turn Inclusion Into Impact — Showcase your DEI commitment with tangible, visible credentials.
       </p>
       <div className="benefits-content">
         <div className="benefits-image">

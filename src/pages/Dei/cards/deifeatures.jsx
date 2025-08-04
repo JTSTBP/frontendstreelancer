@@ -16,9 +16,11 @@ const Deifeatures =forwardRef( ({ onTakeSurveyClick },ref)=> {
     <div ref={ref} className="flex-features-container">
       <div className="left-section">
         <img src={arrowCircle} alt="Big Circle" className="big-circle" />
-        <h2>Take the DEI Score Test Today.</h2>
+        <h2>Your DEI Score Awaits</h2>
         <p>
-          Quickly assess and benchmark your company’s diversity and inclusion practices — across gender, disability, and LGBTQ+ — and earn your DEI Badge.
+         Quick, Powerful & Insightful – Take the 5-Minute DEI Score Test Today
+         <br/>
+         Assess and benchmark your organization’s Diversity, Equity & Inclusion practices across Gender, Disability & LGBTQ+.
         </p>
 
         <div className="image-stack">
@@ -37,7 +39,7 @@ const Deifeatures =forwardRef( ({ onTakeSurveyClick },ref)=> {
             </button>
           </div>
 
-          <h2 className="dei-heading">Your DEI Journey</h2>
+          <h2 className="dei-heading">Your DEI Journey Starts Here</h2>
           <p className="dei-description">
             Our assessment helps you identify where your organization<br />
             stands on the DEI maturity curve and provides a roadmap<br />

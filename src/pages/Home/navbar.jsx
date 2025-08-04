@@ -45,7 +45,7 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <img src={require("../../images/logo1.png")} alt="Streelancer Logo" />
+        <img src={require("../../images/logo1.png")} onClick={() => {navigate("/")}} alt="Streelancer Logo" />
       </div>
 
       <ul className={`nav-links ${menuOpen ? "open" : "close"}`}>
@@ -77,7 +77,7 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
         
         <li onClick={() =>{ navigate("/Academy"); setMenuOpen(false)}}>Academy</li>
         <li onClick={() => { navigate("/Community");setMenuOpen(false)}}>Community</li>
-
+        <li onClick={() => { navigate("/AboutUs");setMenuOpen(false)}}>About Us</li>
         <li>
           {isLoggedIn && (
             <div className="profile-dropdown-container desktop-only" ref={profileRef}>

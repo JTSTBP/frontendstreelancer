@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import topWave from '../../../images/sambg2.png';
+
 import { ArrowLeft } from 'lucide-react';
 
 
@@ -19,8 +20,8 @@ const Deibanner = () => {
         
         <div className="text-overlay">
           
-          <h1>Check Your Workplace Inclusion. Get Your DEI Score.</h1>
-          <p>5-minute survey. Benchmark your DEI. Earn a badge.</p>
+          <h1>Is Your Workplace Truly Inclusive?</h1>
+          <p>5-Minute DEI Scorecard • Benchmark. Improve. Get Badged.</p>
         </div>
       </div>
    </div>

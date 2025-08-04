@@ -4,6 +4,7 @@
 import "./formcard.css";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Country, State, City } from "country-state-city";
 
 const Personalcard = ({ formData, setFormData }) => {
   const deiOptions = [
@@ -20,45 +21,87 @@ const Personalcard = ({ formData, setFormData }) => {
   const [cities, setCities] = useState([]);
 
   const [selectedCountry, setSelectedCountry] = useState(formData.personal.country || "");
+  
   const [selectedState, setSelectedState] = useState(formData.personal.state || "");
   const [selectedCity, setSelectedCity] = useState(formData.personal.city || "");
 
-  // Fetch all countries
-  useEffect(() => {
-    axios.get("https://countriesnow.space/api/v0.1/countries")
-      .then((res) => setCountries(res.data.data))
-      .catch((err) => console.error(err));
+// useEffect(() => {
+//   axios.get("https://countriesnow.space/api/v0.1/countries")
+//     .then((res) => {
+//       console.log(res.data);
+//       setCountries(res.data.data);
+//     })
+//     .catch((err) => console.error(err));
+// }, []);
+
+// useEffect(() => {
+//   if (selectedCountry) {
+//     axios.post("https://countriesnow.space/api/v0.1/countries/states", { country: selectedCountry })
+//       .then((res) => {
+//         console.log(res.data);
+//         setStates(res.data.data.states);
+//       })
+//       .catch((err) => console.error(err));
+//   } else {
+//     setStates([]);
+//   }
+//   setSelectedState("");
+//   setCities([]);
+//   setSelectedCity("");
+// }, [selectedCountry]);
+
+// useEffect(() => {
+//   if (selectedState) {
+//     axios.post("https://countriesnow.space/api/v0.1/countries/state/cities", {
+//       country: selectedCountry,
+//       state: selectedState
+//     })
+//       .then((res) => {
+//         console.log(res.data);
+//         setCities(res.data.data);
+//       })
+//       .catch((err) => console.error(err));
+//   } else {
+//     setCities([]);
+//   }
+//   setSelectedCity("");
+// }, [selectedState]);
+
+
+
+useEffect(() => {
+  if (formData.personal.country) {
+    setSelectedCountry(formData.personal.country);  // ISO code like "IN"
+    setStates(State.getStatesOfCountry(formData.personal.country));
+  }
+  if (formData.personal.state) {
+    setSelectedState(formData.personal.state); // ISO code like "AP"
+    setCities(City.getCitiesOfState(formData.personal.country, formData.personal.state));
+  }
+  if (formData.personal.city) {
+    setSelectedCity(formData.personal.city);  // City name like "Vijayawada"
+  }
+}, [formData.personal]);
+
+
+useEffect(() => {
+    setCountries(Country.getAllCountries());
   }, []);
 
-  // Fetch states when country changes
   useEffect(() => {
     if (selectedCountry) {
-      axios.post("https://countriesnow.space/api/v0.1/countries/states", {
-        country: selectedCountry
-      })
-      .then((res) => setStates(res.data.data.states))
-      .catch((err) => console.error(err));
-    } else {
-      setStates([]);
+      setStates(State.getStatesOfCountry(selectedCountry));
+      setSelectedState("");
+      setCities([]);
+      setSelectedCity("");
     }
-    setSelectedState("");
-    setCities([]);
-    setSelectedCity("");
   }, [selectedCountry]);
 
-  // Fetch cities when state changes
   useEffect(() => {
     if (selectedState) {
-      axios.post("https://countriesnow.space/api/v0.1/countries/state/cities", {
-        country: selectedCountry,
-        state: selectedState
-      })
-      .then((res) => setCities(res.data.data))
-      .catch((err) => console.error(err));
-    } else {
-      setCities([]);
+      setCities(City.getCitiesOfState(selectedCountry, selectedState));
+      setSelectedCity("");
     }
-    setSelectedCity("");
   }, [selectedState]);
 
   const handleChange = (e) => {
@@ -104,7 +147,9 @@ const Personalcard = ({ formData, setFormData }) => {
 
   // Handle country-state-city changes separately for formData
   const handleCountryChange = (e) => {
+    
     const value = e.target.value;
+
     setSelectedCountry(value);
     setFormData((prev) => ({
       ...prev,
@@ -183,10 +228,10 @@ const Personalcard = ({ formData, setFormData }) => {
 
         {/* Country-State-City Dropdowns Side by Side */}
         <div className="form-row" style={{ display: "flex", gap: "10px" }}>
-          <select value={selectedCountry} onChange={handleCountryChange}>
+          {/* <select value={selectedCountry} onChange={handleCountryChange}>
             <option value="">Select Country</option>
             {countries.map((c, idx) => (
-              <option key={idx} value={c.country}>{c.country}</option>
+              <option key={idx} value={c.name}>{c.name}</option>
             ))}
           </select>
 
@@ -201,6 +246,35 @@ const Personalcard = ({ formData, setFormData }) => {
             <option value="">Select City</option>
             {cities.map((city, idx) => (
               <option key={idx} value={city}>{city}</option>
+            ))}
+          </select> */}
+
+
+
+           <select value={formData.personal.country } onChange={handleCountryChange}>
+            <option value="">Select Country</option>
+            {countries.map((c) => (
+              <option key={c.isoCode} value={c.isoCode}>
+                {c.name}
+              </option>
+            ))}
+          </select>
+
+          <select value={formData.personal.state} onChange={handleStateChange} disabled={!selectedCountry}>
+            <option value="">Select State</option>
+            {states.map((s) => (
+              <option key={s.isoCode} value={s.isoCode}>
+                {s.name}
+              </option>
+            ))}
+          </select>
+
+          <select value={formData.personal.city} onChange={handleCityChange} disabled={!selectedState}>
+            <option value="">Select City</option>
+            {cities.map((city) => (
+              <option key={city.name} value={city.name}>
+                {city.name}
+              </option>
             ))}
           </select>
         </div>

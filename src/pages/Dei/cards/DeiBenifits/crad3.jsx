@@ -12,10 +12,9 @@ const Card3
  = () => {
   return (
     <div className="public-card dei-badge-card">
-      <h3>Public Showcase</h3>
+      <h3>🌍 GAIN PUBLIC VISIBILITY</h3>
       <p>
-        Be featured in our directory of DEI-committed organizations and gain recognition in industry
-        publications and events.
+       Be featured in our Verified DEI Organizations Directory and highlighted in industry publications and events.
       </p>
 
       <div className="icon-grid">

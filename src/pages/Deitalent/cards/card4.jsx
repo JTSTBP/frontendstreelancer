@@ -12,34 +12,30 @@ import ShoppingBag from "../../../images/ser7.png"
 const industries = [
   {
     title: "Manufacturing & EMS ",
-    description: "Roles: Documentation, backend coordination, customer support.",
+    description: "Roles: Documentation • Backend Coordination • Customer Support",
     icon: Bank 
   },
   {
     title: "FMCG",
-    description: "Sales support, inventory management, customer engagement",
+    description: "Roles: Sales Support • Inventory Management • Customer Engagement",
     icon: ShoppingCart 
   },
   {
     title: "Healthcare & Pharmaceuticals",
-    description: "Roles: Teleconsultation support, claims processing, regulatory documentation.",
+    description: "Roles: Teleconsultation Support • Claims Processing • Regulatory Documentation",
     icon: HeartPulse
   },
   {
     title: "Logistics, Infrastructure & Construction",
-    description: "Ticket desk, route support, virtual admins  Daily ops support with zero infra burden",
+    description: "Roles: Ticket Desk • Route Support • Virtual Admins",
     icon: Truck
   },
   {
     title: "Startups, SaaS & Tech",
-    description: "Roles: Content moderation, lead generation, CRM hygiene, email/chat support.",
+    description: "Roles: Content Moderation • Lead Generation • CRM Hygiene • Email/Chat Support",
     icon: Laptop
   },
-  {
-    title: "Manufacturing & EMS",
-    description: "Roles: Documentation, backend coordination, customer support.",
-    icon: ShoppingBag
-  }
+  
 ];
 
 const IndustriesSection = () => {
@@ -47,7 +43,7 @@ const IndustriesSection = () => {
     <section className="industries-section">
       <h2 className="industries-title">Industries We Serve</h2>
       <p className="industries-subtitle">
-        Our trained talent fits seamlessly into various sectors, providing specialized skills for each industry.
+       Our women workforce brings specialized skills to every sector—with zero infra burden and full flexibility.
       </p>
 
       <div className="industries-content">

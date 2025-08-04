@@ -18,9 +18,9 @@ const GlobalFlexNetwork = () => {
         
         <div className="text-overlay">
          
-          <h1>Hire DEI-Aligned Women Talent — Managed & Ready.</h1>
+          <h1>Build A DEI-Ready Team with Purpose and Speed</h1>
           <p>
-         Vetted, flexible, fully managed teams delivered in 72 hours.
+         Verified Women Talent. Remote-Ready. Fully Managed. Delivered in 72 Hours.
           </p>
         </div>
       </div>

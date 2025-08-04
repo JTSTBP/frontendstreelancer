@@ -97,12 +97,13 @@ const googleLogin = useGoogleLogin({
       });
 
       const data = await response.json();
-
+console.log(data,"data")
       if (response.ok) {
          setMessageType("Success");
         setMessage(data.message || "Google login Success.");
         localStorage.setItem("token", data.token);
         navigate(data.isNewUser ? "/Registration" : "/");
+         navigate(data.registrationdone ? "/Registration" : "/");
       } else {
         setMessageType("error");
         setMessage(data.message || "Google login failed.");

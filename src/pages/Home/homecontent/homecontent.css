@@ -161,6 +161,7 @@ bottom:4px;
     height: 442px;
     overflow: hidden;
   border-radius: 10px;
+  text-align: left;
 }
 
 .offer-section .card-image {
@@ -173,12 +174,13 @@ bottom:4px;
 /* h1 centered at the top */
 .offer-section .top-center {
   position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  font-size: var(--subheadfont);
-  margin: 0;
+    top: 32px;
+    left: 63%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: var(--subheadfont);
+    margin: 0;
+    width: 51%;
 
 }
 
@@ -694,7 +696,7 @@ width:24em;}
 .step-card {
   background: var(--smallbg);
   border-radius: 12px;
-  width: 200px;
+  width: 240px;
   padding: 20px;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
 text-align: left;
@@ -987,7 +989,7 @@ width: 120px;
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 45px;
 }
 
 .findgreat-image-container img {

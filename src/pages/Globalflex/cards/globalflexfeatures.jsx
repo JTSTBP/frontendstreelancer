@@ -8,9 +8,10 @@ const GlobalFlexFeatures = () => {
     <div className="flex-features-container">
       <div className="left-section">
         <img src={arrowCircle} alt="Big Circle" className="big-circle" />
-        <h2>Why Hire With Us</h2>
+        <h2>🚀 Why Hire With Us</h2>
         <p>
-        Build your team in just 72 hours and save up to 40% without compromising quality.
+       BUILD YOUR DREAM TEAM IN 72 HOURS — AND SAVE UP TO 40%
+No Compromise. Just Verified Talent. Fully Managed. DEI-Aligned.
         </p>
 
         <div className="image-stack">
@@ -22,27 +23,31 @@ const GlobalFlexFeatures = () => {
 
       <div className="right-section">
   <div className="feature-item">
-    <h3>1. Managed Service</h3>
+    <h3>🔵 1. Managed Service</h3>
     <p>
-      We hire, onboard, and manage your team for you.
+      We HIRE, ONBOARD & MANAGE your team — end-to-end.
     </p>
   </div>
   <div className="feature-item">
-    <h3>2. Flexible Hiring</h3>
+    <h3>🔵 2. Flexible Hiring</h3>
     <p>
-    Full-time, project-based, or consulting — you choose.
+   Full-Time. Project-Based. Fractional.
+Total Flexibility. Zero Friction.
+
     </p>
   </div>
   <div className="feature-item">
-    <h3>3. Cost Savings</h3>
+    <h3>🔵 3. Cost Savings</h3>
     <p>
-     Save up to 40% vs in-house.
+     Save up to 40% vs in-house hiring — without cutting corners.
     </p>
   </div>
   <div className="feature-item">
-    <h3>4. Quick Start</h3>
+    <h3>🔵 4. Quick Start</h3>
     <p>
-      Deploy trained talent within 72 hours.
+      Ready-to-work talent in just 72 HOURS.
+Trained. Vetted. 
+
     </p>
   </div>
 </div>

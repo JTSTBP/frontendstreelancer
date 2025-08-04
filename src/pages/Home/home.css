@@ -82,6 +82,7 @@ font-family: 'Roboto', sans-serif;
   font-size: 24px;
   cursor: pointer;
   z-index: 999;
+  margin-right: 15px;
   justify-self: flex-end;
 }
 
@@ -105,7 +106,7 @@ border-radius: 4px;
  border: 1px solid  var(--primarycolor);
 }
 .standard-btn{
-width: 177px;
+padding: 0px 20px !important;
   height: 48px;
    border: none;
   border-radius: 4px;
@@ -308,15 +309,18 @@ color: #FFE8E8;
   .navbar{
     padding:0.5rem 1rem ;
   }
+  .hero-buttons {
+    flex-direction: column;
+  }
 }
-@media  (min-width:600px) and (max-width:910px)  {
+@media  (min-width:900px) and (max-width:1160px)  {
  
 
 .nav-links {
-  gap:12px;
+  gap:13px;
 }
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .nav-links {
     position: absolute;
     top: 70px;
@@ -382,7 +386,7 @@ color: #FFE8E8;
 @media (max-width: 890px) {
   
   .standard-btn{
-               width: 123px;
+        
         height: 37px;
         padding: 10px;
   
