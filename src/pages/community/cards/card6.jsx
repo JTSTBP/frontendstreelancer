@@ -10,45 +10,29 @@ import Backendurl from "../../../config"
 const dummyData = [
   {
     image: blog1,
-    heading: "Talent Acquisition",
-    title: "Not Sure Which Hiring Strategy Fits You Best?",
-    description:
+    title: "Talent Acquisition",
+    
+    content:
       "From quick staffing to strategic talent acquisition, we tailor solutions that grow with your business.",
     navigate: "/Community/foundermistake",
   },
   {
     image: blog2,
-    heading: "Attitude vs Skill",
-    title: "Attitude or Skill? Why Not Both.",
-    description:
+    title: "Attitude vs Skill",
+  
+    content:
       "Future-ready teams need more than just qualifications—they need the right mindset and build a team that grows with you.",
     navigate: "/Community/Skills",
   },
   {
     image: blog3,
-    heading: "",
+
     title: "Hiring Doesn’t Have to Be a Guessing Game",
-    description:
+    content:
       "Avoid common hiring pitfalls, tap into industry expertise, and scale your team the right way from day one.",
     navigate: "/Community/Talent",
   },
-  {
-    image: blog1,
-    heading: "Example1",
-    title: "Not Sure Which Hiring Strategy Fits You Best?",
-    description:
-      "From quick staffing to strategic talent acquisition, we tailor solutions that grow with your business.",
-    navigate: "/Community/foundermistake",
-  },
-  {
-    image: blog2,
-    heading: "Example2",
-    title: "Attitude or Skill? Why Not Both.",
-    description:
-      "Future-ready teams need more than just qualifications—they need the right mindset and build a team that grows with you.",
-    navigate: "/Community/Skills",
-  },
-  
+ 
   
 ];
 
